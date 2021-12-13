@@ -1,9 +1,9 @@
-﻿<a href="index.php"><img class="logo" src="images/jamoi.gif" alt="jamoi.co.uk" border="0" valign="middle"></a>
+﻿<a href="index.html"><img class="logo" src="images/jamoi.gif" alt="jamoi.co.uk" border="0" valign="middle"></a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="myphones.php">My Phones</a>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-<a href="tunes.php">Tunes</a>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-<a href="twitter.php">Twitter</a>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+<a href="myphones.html">My Phones</a>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+<a href="tunes.html">Tunes</a>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+<a href="twitter.html">Twitter</a>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
 <a href="http://jamoiholland.blogspot.com">Blog</a>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-<a href="androidphones.php">UK Android Phones (2008-2013)</a>&nbsp;&nbsp;&nbsp;
+<a href="androidphones.html">UK Android Phones (2008-2013)</a>&nbsp;&nbsp;&nbsp;
 <hr noshade="noshade">
 <br>
