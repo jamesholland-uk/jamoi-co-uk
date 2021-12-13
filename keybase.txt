@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/jamoiholland
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.jamoi.co.uk
+  * I am jamoiholland (https://keybase.io/jamoiholland) on keybase.
+  * I have a public key with fingerprint CB57 96E0 0329 989C 88BE  7991 822D 2B70 124D C9D4
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010152abf0f3abe461df917ff3034d4953ec06fc6e0da14912d46798a7ff0598f6960a",
+            "fingerprint": "cb5796e00329989c88be7991822d2b70124dc9d4",
+            "host": "keybase.io",
+            "key_id": "822d2b70124dc9d4",
+            "kid": "010152abf0f3abe461df917ff3034d4953ec06fc6e0da14912d46798a7ff0598f6960a",
+            "uid": "3adeaec259da53592fb5de37b7959d19",
+            "username": "jamoiholland"
+        },
+        "service": {
+            "hostname": "www.jamoi.co.uk",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1489612503,
+    "expire_in": 157680000,
+    "prev": "7355b9e49c2dae1d4b77937ec69d2abae07ef71c608ac4d3071e5910aab2a7b2",
+    "seqno": 11,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.66
+Comment: https://keybase.io/crypto
+
+yMIxAnicrZJpSFVBFMef7dpKRWRh0VCQ8nrO3G3uvKggSjOIMiofIT3m3pmrV5/3
+3t6iWdlGtFGQ9qWIEisriPJDCxItaklYBCWUFBFBFJaSFC0UbXMf9a2PzZdhzvn9
+/3PO4dwePTiQlfEt78b+gY+ZgYx77Y2pQKTrQs8mYLisFoQ3gUqevniM8UQyWmkz
+EAYQQaRK1LCgJVODKxpiFkHYsmQoK0whqsxNqFmmxiGjSCFIYoqGiU4FAlWiWxrR
+IAVBYNlOGY97cdtJClvTUDERGihLhOjE1HWDY0KQLklMMjBEksJMwhQhLHcTvkIU
+Z9AED9muiIlHNF3eP/j/XHcqbSdTxik3JZUwqsoqkSxDZVzGBiYihIgPJnjcoVVc
+0BW0yrXL3ViMOgzUBYHIVNsm94frd/OHqqmpCaXJkOmGUpXCwou7Sdd0YyJZnkx6
+ibAvTtZ6aZob0T8+UcN2mBinUFTzeMJ2HRBGgjSTtm+MFJ1oSFKhHAR8g2fHedT2
+CRVrOhTH/4dXC0ssq6pBuEJMiVGOmGJgTGTMTY0wMTrKIeYWRqYGdWoqTIYYcZUg
+SKkhUWxIwO9sveMKbyTqpGXCM2GXOTSZinNQ19FWOiSQkRUYNnSQv2eBrMxxf7dv
+zdThv8zHIxd/XlKYX+a87CvMyX9R2/9kfrOXev397qpXXaX1Fw6fCc6ugkX1V8dU
+VfRuW/D8+MmEnj1+YmXRwqMv9m3f19d2amP3h62bL0/qeFvSsts4X9iyMLU193re
+7g1t7VOO6hWHD71je08vDeSmVrYGQc668MyCeXhn6fuJn+95nX0Pp8W6Ry+a4eSs
+aHoz4sf5s9XzvaZrW6403XlwZMKB7Pr72yeDnsjpctB/pi5+LFYx0D6l4dGn48UH
+1+XeOHUzFFq2c8/XH70NY4suNrXuaS4uXB75tCPyNG/WpYJd30sj1289Wz3nfXbL
+1RPhS5d/luSunT5qcYN3sKfzXHfB9BA42fhl7qKnvwHztUgd
+=H473
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jamoiholland
+
+==================================================================
