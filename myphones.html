@@ -9,7 +9,21 @@
 
 <body>
 
-<?php include("tophalf.txt"); ?> 
+    <!-- https://github.com/chris-l/html-include -->
+    <script>
+        if ('registerElement' in document
+          && 'createShadowRoot' in HTMLElement.prototype
+          && 'import' in document.createElement('link')
+          && 'content' in document.createElement('template')) {
+          // We're using a browser with native WC support!
+        } else {
+          document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.5/webcomponents.min.js"><\/script>')
+        }
+    </script>
+    <script src="html-include.min.js"></script>
+    <!-- https://github.com/chris-l/html-include -->
+
+<html-include src="tophalf.txt"></html-include>
 
 <div align="center">
 
@@ -98,7 +112,7 @@ $conn->close();
 
 </div>
 
-<?php include("bottomhalf.txt"); ?> 
+<html-include src="bottomhalf.txt"></html-include>
 
 </body>
 
