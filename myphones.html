@@ -27,90 +27,413 @@
 
 <div align="center">
 
-My own "personal" phones.<br><br>
-
-<table border="1" cellspacing="0" cellpadding="4" align="center">
-<tr>
-<th>&nbsp;</th>
-<th>Date</th>
-<th>Manufacturer</th>
-<th>Phone</th>
-<th>OS</th>
-</tr>
-<?
-include("inc.php");
-
-$sql="SELECT * FROM JamoiPhones JOIN Phones ON JamoiPhones.Name=Phones.Name WHERE Ownership='Personal' ORDER BY JamoiPhones.Purchased DESC";
-
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-	// output data of each row
-	while($row = $result->fetch_assoc()) {
-		// print_r($row);
-
-?>
-<tr>
-<td bgcolor="white" align="center"><a href="phones/<? echo $row["Name"]; ?>.jpg"><img src="phones/_<? echo $row["Name"]; ?>.jpg" alt="<? echo $row["Name"]; ?>" border="0"></a></td>
-<td><? echo $row["Purchased"]; ?><? if ($row["Comment"]!="0") echo '<br>(', $row["Comment"], ')'; ?></td>
-<td><? echo $row["Manufacturer"]; ?></td>
-<td><? echo $row["Name"]; ?></td>
-<td><? echo $row["OS"]; ?></td>
-</tr>
-<?php
-	}
-}
-else {
-	echo "0 results";
-}
-?>
-</table>
-<br>
-<br>
-<br>
-<br>
-
-My work phones.<br><br>
-
-<table border="1" cellspacing="0" cellpadding="4" align="center">
-<tr>
-<th>&nbsp;</th>
-<th>Date</th>
-<th>Manufacturer</th>
-<th>Phone</th>
-<th>OS</th>
-</tr>
-<?
-
-$sql2="SELECT * FROM JamoiPhones JOIN Phones ON JamoiPhones.Name=Phones.Name WHERE Ownership='Work' ORDER BY JamoiPhones.Purchased DESC";
-
-$result2 = $conn->query($sql2);
-
-if ($result2->num_rows > 0) {
-	// output data of each row
-	while($row = $result2->fetch_assoc()) {
-		// print_r($row);
-?>
-<tr>
-<td bgcolor="white" align="center"><a href="phones/<? echo $row["Name"]; ?>.jpg"><img src="phones/_<? echo $row["Name"]; ?>.jpg" alt="<? echo $row["Name"]; ?>" border="0"></a></td>
-<td><? echo $row["Purchased"]; ?><? if ($row["Comment"]!="0") echo '<br>(', $row["Comment"], ')'; ?></td>
-<td><? echo $row["Manufacturer"]; ?></td>
-<td><? echo $row["Name"]; ?></td>
-<td><? echo $row["OS"]; ?></td>
-</tr>
-<?php
-	}
-}
-else {
-	echo "0 results";
-}
-
-$conn->close();
-
-?>
-</table>
-
-</div>
+  My own "personal" phones.<br><br>
+  
+  <table border="1" cellspacing="0" cellpadding="4" align="center">
+  <tr>
+  <th>&nbsp;</th>
+  <th>Date</th>
+  <th>Manufacturer</th>
+  <th>Phone</th>
+  <th>OS</th>
+  </tr>
+  <tr>
+    <td bgcolor="white" align="center"><a href="phones/Pixel 5.jpg"><img src="phones/_Pixel 5.jpg" alt="Pixel 5" border="0"></a></td>
+    <td></td>
+    <td>Google</td>
+    <td>Pixel 5</td>
+    <td>Android</td>
+  </tr>
+  <tr>
+    <td bgcolor="white" align="center"><a href="phones/Pixel 4a.jpg"><img src="phones/_Pixel 4a.jpg" alt="Pixel 4a" border="0"></a></td>
+    <td></td>
+    <td>Google</td>
+    <td>Pixel 4</td>
+    <td>Android</td>
+  </tr>
+  <tr>
+    <td bgcolor="white" align="center"><a href="phones/Pixel 5.jpg"><img src="phones/_Pixel 5.jpg" alt="Pixel 5" border="0"></a></td>
+    <td></td>
+    <td>Google</td>
+    <td>Pixel 5</td>
+    <td>Android</td>
+  </tr>
+  <tr>
+    <td bgcolor="white" align="center"><a href="phones/Pixel 4.jpg"><img src="phones/_Pixel 4.jpg" alt="Pixel 4" border="0"></a></td>
+    <td></td>
+    <td>Google</td>
+    <td>Pixel 4</td>
+    <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Pixel 3.jpg"><img src="phones/_Pixel 3.jpg" alt="Pixel 3" border="0"></a></td>
+  <td>2018-12-18</td>
+  <td>Google</td>
+  <td>Pixel 3</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Jelly Pro.jpg"><img src="phones/_Jelly Pro.jpg" alt="Jelly Pro" border="0"></a></td>
+  <td>2018-05-31</td>
+  <td>Unihertz</td>
+  <td>Jelly Pro</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Pixel 2.jpg"><img src="phones/_Pixel 2.jpg" alt="Pixel 2" border="0"></a></td>
+  <td>2017-12-08</td>
+  <td>Google</td>
+  <td>Pixel 2</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Pixel.jpg"><img src="phones/_Pixel.jpg" alt="Pixel" border="0"></a></td>
+  <td>2017-02-12</td>
+  <td>Google</td>
+  <td>Pixel</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Swift 2 Plus.jpg"><img src="phones/_Swift 2 Plus.jpg" alt="Swift 2 Plus" border="0"></a></td>
+  <td>2016-12-08</td>
+  <td>Wileyfox</td>
+  <td>Swift 2 Plus</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/iPhone 5s.jpg"><img src="phones/_iPhone 5s.jpg" alt="iPhone 5s" border="0"></a></td>
+  <td>2016-10-29</td>
+  <td>Apple</td>
+  <td>iPhone 5s</td>
+  <td>iOS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Moto X Play.jpg"><img src="phones/_Moto X Play.jpg" alt="Moto X Play" border="0"></a></td>
+  <td>2016-09-24</td>
+  <td>Motorola</td>
+  <td>Moto X Play</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Mi 4c.jpg"><img src="phones/_Mi 4c.jpg" alt="Mi 4c" border="0"></a></td>
+  <td>2016-03-09</td>
+  <td>Xiaomi</td>
+  <td>Mi 4c</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Xperia Z5 Compact.jpg"><img src="phones/_Xperia Z5 Compact.jpg" alt="Xperia Z5 Compact" border="0"></a></td>
+  <td>2016-01-15</td>
+  <td>Sony</td>
+  <td>Xperia Z5 Compact</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/X.jpg"><img src="phones/_X.jpg" alt="X" border="0"></a></td>
+  <td>2015-12-10</td>
+  <td>OnePlus</td>
+  <td>X</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Lumia 920.jpg"><img src="phones/_Lumia 920.jpg" alt="Lumia 920" border="0"></a></td>
+  <td>2015-10-27<br>(Long-Term Loan)</td>
+  <td>Nokia</td>
+  <td>Lumia 920</td>
+  <td>Windows Phone</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Swift.jpg"><img src="phones/_Swift.jpg" alt="Swift" border="0"></a></td>
+  <td>2015-09-30</td>
+  <td>Wileyfox</td>
+  <td>Swift</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Xperia Z3 Compact.jpg"><img src="phones/_Xperia Z3 Compact.jpg" alt="Xperia Z3 Compact" border="0"></a></td>
+  <td>2014-09-25</td>
+  <td>Sony</td>
+  <td>Xperia Z3 Compact</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Moto G.jpg"><img src="phones/_Moto G.jpg" alt="Moto G" border="0"></a></td>
+  <td>2014-02-26</td>
+  <td>Motorola</td>
+  <td>Moto G</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Xperia Z1 Compact.jpg"><img src="phones/_Xperia Z1 Compact.jpg" alt="Xperia Z1 Compact" border="0"></a></td>
+  <td>2014-01-31</td>
+  <td>Sony</td>
+  <td>Xperia Z1 Compact</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Moto G.jpg"><img src="phones/_Moto G.jpg" alt="Moto G" border="0"></a></td>
+  <td>2013-12-08</td>
+  <td>Motorola</td>
+  <td>Moto G</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Ascend Y100.jpg"><img src="phones/_Ascend Y100.jpg" alt="Ascend Y100" border="0"></a></td>
+  <td>2013-02-08</td>
+  <td>Huawei</td>
+  <td>Ascend Y100</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Razr i.jpg"><img src="phones/_Razr i.jpg" alt="Razr i" border="0"></a></td>
+  <td>2012-11-06</td>
+  <td>Motorola</td>
+  <td>Razr i</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/N9.jpg"><img src="phones/_N9.jpg" alt="N9" border="0"></a></td>
+  <td>2012-10-12<br>(Loan)</td>
+  <td>Nokia</td>
+  <td>N9</td>
+  <td>MeeGo</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/One V.jpg"><img src="phones/_One V.jpg" alt="One V" border="0"></a></td>
+  <td>2012-09-03<br>(Review Unit)</td>
+  <td>HTC</td>
+  <td>One V</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Nexus S.jpg"><img src="phones/_Nexus S.jpg" alt="Nexus S" border="0"></a></td>
+  <td>2012-07-10</td>
+  <td>Samsung</td>
+  <td>Nexus S</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/iPhone 3GS.jpg"><img src="phones/_iPhone 3GS.jpg" alt="iPhone 3GS" border="0"></a></td>
+  <td>2012-06-21</td>
+  <td>Apple</td>
+  <td>iPhone 3GS</td>
+  <td>iOS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Xperia X10 Mini.jpg"><img src="phones/_Xperia X10 Mini.jpg" alt="Xperia X10 Mini" border="0"></a></td>
+  <td>2012-05-18</td>
+  <td>Sony Ericsson</td>
+  <td>Xperia X10 Mini</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Xperia Ray.jpg"><img src="phones/_Xperia Ray.jpg" alt="Xperia Ray" border="0"></a></td>
+  <td>2012-04-09</td>
+  <td>Sony Ericsson</td>
+  <td>Xperia Ray</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/x18i.jpg"><img src="phones/_x18i.jpg" alt="x18i" border="0"></a></td>
+  <td>2012-04-02</td>
+  <td>iStar</td>
+  <td>x18i</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Omnia 7.jpg"><img src="phones/_Omnia 7.jpg" alt="Omnia 7" border="0"></a></td>
+  <td>2011-12-30</td>
+  <td>Samsung</td>
+  <td>Omnia 7</td>
+  <td>Windows Phone</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Xperia Ray.jpg"><img src="phones/_Xperia Ray.jpg" alt="Xperia Ray" border="0"></a></td>
+  <td>2011-09-24</td>
+  <td>Sony Ericsson</td>
+  <td>Xperia Ray</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Pre 3.jpg"><img src="phones/_Pre 3.jpg" alt="Pre 3" border="0"></a></td>
+  <td>2011-08-18</td>
+  <td>HP</td>
+  <td>Pre 3</td>
+  <td>WebOS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Nexus One.jpg"><img src="phones/_Nexus One.jpg" alt="Nexus One" border="0"></a></td>
+  <td>2011-07-18</td>
+  <td>HTC</td>
+  <td>Nexus One</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Droid Pro.jpg"><img src="phones/_Droid Pro.jpg" alt="Droid Pro" border="0"></a></td>
+  <td>2011-05-09</td>
+  <td>Motorola</td>
+  <td>Droid Pro</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Pre.jpg"><img src="phones/_Pre.jpg" alt="Pre" border="0"></a></td>
+  <td>2011-04-12</td>
+  <td>Palm</td>
+  <td>Pre</td>
+  <td>WebOS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/DEFY.jpg"><img src="phones/_DEFY.jpg" alt="DEFY" border="0"></a></td>
+  <td>2010-11-22</td>
+  <td>Motorola</td>
+  <td>DEFY</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Xperia X10 Mini Pro.jpg"><img src="phones/_Xperia X10 Mini Pro.jpg" alt="Xperia X10 Mini Pro" border="0"></a></td>
+  <td>2010-07-24</td>
+  <td>Sony Ericsson</td>
+  <td>Xperia X10 Mini Pro</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/i8910 HD.jpg"><img src="phones/_i8910 HD.jpg" alt="i8910 HD" border="0"></a></td>
+  <td>2010-06-15</td>
+  <td>Samsung</td>
+  <td>i8910 HD</td>
+  <td>S60</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Pulse Mini.jpg"><img src="phones/_Pulse Mini.jpg" alt="Pulse Mini" border="0"></a></td>
+  <td>2010-05-13</td>
+  <td>Huawei</td>
+  <td>Pulse Mini</td>
+  <td>Android</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/5230.jpg"><img src="phones/_5230.jpg" alt="5230" border="0"></a></td>
+  <td>2010-02-15</td>
+  <td>Nokia</td>
+  <td>5230</td>
+  <td>S60</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/N79.jpg"><img src="phones/_N79.jpg" alt="N79" border="0"></a></td>
+  <td>2009-08-23</td>
+  <td>Nokia</td>
+  <td>N79</td>
+  <td>S60</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/N85.jpg"><img src="phones/_N85.jpg" alt="N85" border="0"></a></td>
+  <td>2008-12-02</td>
+  <td>Nokia</td>
+  <td>N85</td>
+  <td>S60</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/6300.jpg"><img src="phones/_6300.jpg" alt="6300" border="0"></a></td>
+  <td>2007-03-14</td>
+  <td>Nokia</td>
+  <td>6300</td>
+  <td>S40</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/6100.jpg"><img src="phones/_6100.jpg" alt="6100" border="0"></a></td>
+  <td>2006-02-06</td>
+  <td>Nokia</td>
+  <td>6100</td>
+  <td>S40</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/6230.jpg"><img src="phones/_6230.jpg" alt="6230" border="0"></a></td>
+  <td>2004-09-13</td>
+  <td>Nokia</td>
+  <td>6230</td>
+  <td>S40</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/M50.jpg"><img src="phones/_M50.jpg" alt="M50" border="0"></a></td>
+  <td>2003-01-01</td>
+  <td>Siemens</td>
+  <td>M50</td>
+  <td></td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/3310.jpg"><img src="phones/_3310.jpg" alt="3310" border="0"></a></td>
+  <td>2002-01-01</td>
+  <td>Nokia</td>
+  <td>3310</td>
+  <td>S40</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/3210.jpg"><img src="phones/_3210.jpg" alt="3210" border="0"></a></td>
+  <td>2000-01-01</td>
+  <td>Nokia</td>
+  <td>3210</td>
+  <td>S40</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/PF768.jpg"><img src="phones/_PF768.jpg" alt="PF768" border="0"></a></td>
+  <td>1999-01-01</td>
+  <td>Ericsson</td>
+  <td>PF768</td>
+  <td></td>
+  </tr>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  My work phones.<br><br>
+  
+  <table border="1" cellspacing="0" cellpadding="4" align="center">
+  <tr>
+  <th>&nbsp;</th>
+  <th>Date</th>
+  <th>Manufacturer</th>
+  <th>Phone</th>
+  <th>OS</th>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/iPhone 5c.jpg"><img src="phones/_iPhone 5c.jpg" alt="iPhone 5c" border="0"></a></td>
+  <td>2013-12-19</td>
+  <td>Apple</td>
+  <td>iPhone 5c</td>
+  <td>iOS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Curve 9300.jpg"><img src="phones/_Curve 9300.jpg" alt="Curve 9300" border="0"></a></td>
+  <td>2012-05-25</td>
+  <td>RIM</td>
+  <td>Curve 9300</td>
+  <td>BlackBerry OS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Curve 8520.jpg"><img src="phones/_Curve 8520.jpg" alt="Curve 8520" border="0"></a></td>
+  <td>2010-07-08</td>
+  <td>RIM</td>
+  <td>Curve 8520</td>
+  <td>BlackBerry OS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/Pearl 8100.jpg"><img src="phones/_Pearl 8100.jpg" alt="Pearl 8100" border="0"></a></td>
+  <td>2007-11-12</td>
+  <td>RIM</td>
+  <td>Pearl 8100</td>
+  <td>BlackBerry OS</td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center"><a href="phones/6021.jpg"><img src="phones/_6021.jpg" alt="6021" border="0"></a></td>
+  <td>2005-09-14</td>
+  <td>Nokia</td>
+  <td>6021</td>
+  <td>Series 40</td>
+  </tr>
+  </table>
+  
+  </div>
 
 <html-include src="bottomhalf.txt"></html-include>
 
