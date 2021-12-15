@@ -27,97 +27,6 @@
 
 <html-include src="tophalf.txt"></html-include>
 
-<?
-
-include("inc.php");
-
-$result = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' ORDER BY Released DESC");
-$num_phones = mysql_numrows($result);
-
-$result4g = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND 4G='1' ORDER BY Released DESC");
-$num_phones_4g = mysql_numrows($result4g);
-
-$Acer = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Acer'");
-$num_Acer = mysql_numrows($Acer);
-$Alcatel = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Alcatel'");
-$num_Alcatel = mysql_numrows($Alcatel);
-$Asus = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Asus'");
-$num_Asus = mysql_numrows($Asus);
-$Cat = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Cat'");
-$num_Cat = mysql_numrows($Cat);
-$Dell = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Dell'");
-$num_Dell = mysql_numrows($Dell);
-$Gigabyte = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Gigabyte'");
-$num_Gigabyte = mysql_numrows($Gigabyte);
-$HTC = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='HTC'");
-$num_HTC = mysql_numrows($HTC);
-$Huawei = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Huawei'");
-$num_Huawei = mysql_numrows($Huawei);
-$Inq = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Inq'");
-$num_Inq = mysql_numrows($Inq);
-$JCB = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='JCB'");
-$num_JCB = mysql_numrows($JCB);
-$Kazam = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Kazam'");
-$num_Kazam = mysql_numrows($Kazam);
-$LG = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='LG'");
-$num_LG = mysql_numrows($LG);
-$Lumigon = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Lumigon'");
-$num_Lumigon = mysql_numrows($Lumigon);
-$Motorola = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Motorola'");
-$num_Motorola = mysql_numrows($Motorola);
-$Panasonic = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Panasonic'");
-$num_Panasonic = mysql_numrows($Panasonic);
-$Prestigio = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Prestigio'");
-$num_Prestigio = mysql_numrows($Prestigio);
-$Samsung = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Samsung'");
-$num_Samsung = mysql_numrows($Samsung);
-$Sony = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Sony'");
-$num_Sony = mysql_numrows($Sony);
-$SonyEricsson = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='Sony Ericsson'");
-$num_SonyEricsson = mysql_numrows($SonyEricsson);
-$TCT = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='TCT'");
-$num_TCT = mysql_numrows($TCT);
-$ZTE = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND MANUFACTURER='ZTE'");
-$num_ZTE = mysql_numrows($ZTE);
-
-$r2008 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND RELEASED >= '2008-01-01' AND RELEASED < '2008-12-31'");
-$num_r2008 = mysql_numrows($r2008);
-$r2009 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND RELEASED >= '2009-01-01' AND RELEASED < '2009-12-31'");
-$num_r2009 = mysql_numrows($r2009);
-$r2010 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND RELEASED >= '2010-01-01' AND RELEASED < '2010-12-31'");
-$num_r2010 = mysql_numrows($r2010);
-$r2011 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND RELEASED >= '2011-01-01' AND RELEASED < '2011-12-31'");
-$num_r2011 = mysql_numrows($r2011);
-$r2012 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND RELEASED >= '2012-01-01' AND RELEASED < '2012-12-31'");
-$num_r2012 = mysql_numrows($r2012);
-$r2013 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND RELEASED >= '2013-01-01' AND RELEASED < '2013-12-31'");
-$num_r2013 = mysql_numrows($r2013);
-$r2014 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND RELEASED >= '2014-01-01' AND RELEASED < '2014-12-31'");
-$num_r2014 = mysql_numrows($r2014);
-
-$touch = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND FORMFACTOR='Touch'");
-$num_touch = mysql_numrows($touch);
-$touchslider = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND FORMFACTOR='Touch Slider'");
-$num_touchslider = mysql_numrows($touchslider);
-$touchqwerty = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND FORMFACTOR='Touch Qwerty'");
-$num_touchqwerty = mysql_numrows($touchqwerty);
-
-$core1 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND CPUCORES=1");
-$num_core1 = mysql_numrows($core1);
-$core2 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND CPUCORES=2");
-$num_core2 = mysql_numrows($core2);
-$core4 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND CPUCORES=4");
-$num_core4 = mysql_numrows($core4);
-$core8 = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND CPUCORES=8");
-$num_core8 = mysql_numrows($core8);
-
-$portrait = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND `Resolution Height` > `Resolution Width`");
-$num_portrait = mysql_numrows($portrait);
-$landscape = mysql_query("SELECT * FROM Phones WHERE OS='Android' AND UK='1' AND `Resolution Height` < `Resolution Width`");
-$num_landscape = mysql_numrows($landscape);
-
-mysql_close();
-?>
 
 <br>
 <b>Please note that as of 31 Dec 2013, this project/list is now mothballed as I no longer have the time to keep it up to date, apologies!</b><br>
@@ -127,74 +36,74 @@ Android powered phones available in the UK. Column headings can be clicked to so
 <table>
 <tr>
 	<td align="right">Acer:</td>
-	<td><? echo $num_Acer; ?></td>
+	<td>15</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">2008:</td>
-	<td><? echo $num_r2008; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">Touch Only:</td>
-	<td><? echo $num_touch; ?></td>
+	<td>193</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">Single Core CPU:</td>
-	<td><? echo $num_core1; ?></td>
+	<td>134</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">Portrait Screens:</td>
-	<td><? echo $num_portrait; ?></td>
+	<td>212</td>
 </tr>
 <tr>
 	<td align="right">Alcatel:</td>
-	<td><? echo $num_Alcatel; ?></td>
+	<td>6</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">2009:</td>
-	<td><? echo $num_r2009; ?></td>
+	<td>8</td>
 	<td>&nbsp;</td>
 	<td align="right">Touch Slider:</td>
-	<td><? echo $num_touchslider; ?></td>
+	<td>15</td>
 	<td>&nbsp;</td>
 	<td align="right">Dual Core CPU:</td>
-	<td><? echo $num_core2; ?></td>
+	<td>51</td>
 	<td>&nbsp;</td>
 	<td align="right">Landscape Screens:</td>
-	<td><? echo $num_landscape; ?></td>
+	<td>3</td>
 </tr>
 <tr>
 	<td align="right">Asus:</td>
-	<td><? echo $num_Asus; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">2010:</td>
-	<td><? echo $num_r2010; ?></td>
+	<td>36</td>
 	<td>&nbsp;</td>
 	<td align="right">Touch Qwerty:</td>
-	<td><? echo $num_touchqwerty; ?></td>
+	<td>7</td>
 	<td>&nbsp;</td>
 	<td align="right">Quad Core CPU:</td>
-	<td><? echo $num_core4; ?></td>
+	<td>30</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
 	<td align="right">Cat:</td>
-	<td><? echo $num_Cat; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">2011:</td>
-	<td><? echo $num_r2011; ?></td>
+	<td>59</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td align="right">Octa Core CPU:</td>
-	<td><? echo $num_core8; ?></td>
+	<td>0</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 </tr>
 <tr>
 	<td align="right">Dell:</td>
-	<td><? echo $num_Dell; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">2012:</td>
-	<td><? echo $num_r2012; ?></td>
+	<td>55</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -207,10 +116,10 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Gigabyte:</td>
-	<td><? echo $num_Gigabyte; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">2013:</td>
-	<td><? echo $num_r2013; ?></td>
+	<td>56</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -223,10 +132,10 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">HTC:</td>
-	<td><? echo $num_HTC; ?></td>
+	<td>33</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td align="right">2014:</td>
-	<td><? echo $num_r2014; ?></td>
+	<td>0</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -239,7 +148,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Huawei:</td>
-	<td><? echo $num_Huawei; ?></td>
+	<td>25</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -255,7 +164,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Inq:</td>
-	<td><? echo $num_Inq; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -271,7 +180,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">JCB:</td>
-	<td><? echo $num_JCB; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -287,7 +196,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Kazam:</td>
-	<td><? echo $num_Kazam; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -303,7 +212,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">LG:</td>
-	<td><? echo $num_LG; ?></td>
+	<td>19</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -319,7 +228,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Lumigon:</td>
-	<td><? echo $num_Lumigon; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -335,7 +244,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Motorola:</td>
-	<td><? echo $num_Motorola; ?></td>
+	<td>20</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -351,7 +260,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Panasonic:</td>
-	<td><? echo $num_Panasonic; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -367,7 +276,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Prestigio:</td>
-	<td><? echo $num_Prestigio; ?></td>
+	<td>2</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -383,7 +292,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Samsung:</td>
-	<td><? echo $num_Samsung; ?></td>
+	<td>44</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -399,7 +308,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Sony Ericsson:</td>
-	<td><? echo $num_SonyEricsson; ?></td>
+	<td>15</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -415,7 +324,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">Sony:</td>
-	<td><? echo $num_Sony; ?></td>
+	<td>16</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -431,7 +340,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 <tr>
 	<td align="right">TCT:</td>
-	<td><? echo $num_TCT; ?></td>
+	<td>1</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -443,11 +352,11 @@ Android powered phones available in the UK. Column headings can be clicked to so
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td align="right">4G Phones:</td>
-	<td><? echo $num_phones_4g; ?></td>
+	<td>25</td>
 </tr>
 <tr>
 	<td align="right">ZTE:</td>
-	<td><? echo $num_ZTE; ?></td>
+	<td>10</td>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
@@ -459,7 +368,7 @@ Android powered phones available in the UK. Column headings can be clicked to so
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 	<td align="right">Total Phones:</td>
-	<td><? echo $num_phones; ?></td>
+	<td>215</td>
 </tr>
 </table>
 <br>
@@ -492,40 +401,5166 @@ Android powered phones available in the UK. Column headings can be clicked to so
 </tr>
 </thead>
 <tbody>
-<?
-
-$i=0;
-while ($i < mysql_numrows($result))
-{
-?>
 <tr>
-<td bgcolor="white" align="center"><a href="phones/<? echo mysql_result($result,$i,"Phones.Name"); ?>.jpg"><img src="phones/_<? echo mysql_result($result,$i,"Phones.Name"); ?>.jpg" alt="<? echo mysql_result($result,$i,"Phones.Name"); ?>" height="75" border="0"></a></td>
-<td><? echo mysql_result($result,$i,"Manufacturer"); ?></td>
-<td><? echo mysql_result($result,$i,"Name"); if (mysql_result($result,$i,"Model")!=null) echo '<br>(', mysql_result($result,$i,"Model"), ')'; ?></td>
-<td><? echo mysql_result($result,$i,"Version"); ?></td>
-<td><? if (mysql_result($result,$i,"UI")=="") echo '&nbsp;'; else echo mysql_result($result,$i,"UI"); ?></td>
-<td><? echo mysql_result($result,$i,"FormFactor"); ?></td>
-<td><? echo mysql_result($result,$i,"Width"); ?>mm</td>
-<td><? echo mysql_result($result,$i,"Height"); ?>mm</td>
-<td><? echo mysql_result($result,$i,"Thickness"); ?>mm</td>
-<td><? echo mysql_result($result,$i,"Battery Capacity"); ?>mAh</td>
-<td><? echo FormatDate(mysql_result($result,$i,"Released")); ?></td>
-<td><? if (mysql_result($result,$i,"4G")>0) echo 'Yes'; else echo '&nbsp;'; ?></td>
-<td><? echo mysql_result($result,$i,"Weight"); ?>g</td>
-<td><? echo mysql_result($result,$i,"Screen Size"); ?>&#34;</td>
-<td><? echo mysql_result($result,$i,"Touch Type") . ',<br>' . mysql_result($result,$i,"Screen Type"); ?></td>
-<td><? echo mysql_result($result,$i,"Resolution Width") . ' x ' . mysql_result($result,$i,"Resolution Height"); ?></td>
-<td><? echo mysql_result($result,$i,"CPU"); if (mysql_result($result,$i,"CPU")>10) echo 'MHz'; else echo 'GHz'; if (mysql_result($result,$i,"CPUCores")>1) echo '<br>' . mysql_result($result,$i,"CPUCores") . ' cores'; ?></td>
-<td><? echo mysql_result($result,$i,"RAM"); if (mysql_result($result,$i,"RAM")<33) echo 'GB'; else echo 'MB'; ?></td>
-<td><? echo mysql_result($result,$i,"ROM"); if (mysql_result($result,$i,"ROM")>64) echo 'MB'; else echo 'GB'; ?></td>
-<td><? if (mysql_result($result,$i,"WiFi B")!=0) echo 'b'; else echo '-'; if (mysql_result($result,$i,"WiFi G")!=0) echo '/g'; if (mysql_result($result,$i,"WiFi N")!=0) echo '/n'; if (mysql_result($result,$i,"WiFi AC")!=0) echo '/ac'; ?></td>
-<td><? echo mysql_result($result,$i,"Camera MP"); ?> MP<br><? if (mysql_result($result,$i,"Camera Flash")==0) echo 'No'; else echo mysql_result($result,$i,"Camera Flash Type"); ?> flash</td>
-<td><? if (mysql_result($result,$i,"Video Resolution Width") + mysql_result($result,$i,"Video Resolution Height")==0) echo '? x ?'; else  echo mysql_result($result,$i,"Video Resolution Width") . ' x ' . mysql_result($result,$i,"Video Resolution Height"); ?><br><? if (mysql_result($result,$i,"Video FPS")>0) echo mysql_result($result,$i,"Video FPS"); else echo '? '; ?>fps</td>
+<td bgcolor="white" align="center"><a href="phones/Desire 300.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire 300.jpg" alt="Desire 300" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire 300</td>
+<td>4.2</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>66mm</td>
+<td>132mm</td>
+<td>10mm</td>
+<td>1650mAh</td>
+<td>Dec 2013</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n/ac</td>
+<td> MP<br>No flash</td>
+<td>854 x 480<br>30fps</td>
 </tr>
-<?php
-	$i++;
-}
-?>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid S2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid S2.jpg" alt="Liquid S2" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid S2</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>86mm</td>
+<td>166mm</td>
+<td>9mm</td>
+<td>3300mAh</td>
+<td>Dec 2013</td>
+<td>Yes</td>
+<td>231g</td>
+<td>6&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>1080 x 1920</td>
+<td>2.2GHz<br>4 cores</td>
+<td>2GB</td>
+<td>16GB</td>
+<td>b/g/n/ac</td>
+<td>13 MP<br>LED flash</td>
+<td>1920 x 1080<br>60fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Blade V.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Blade V.jpg" alt="Blade V" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Blade V</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>126mm</td>
+<td>11mm</td>
+<td>1800mAh</td>
+<td>Dec 2013</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1.2GHz<br>4 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Moto G.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Moto G.jpg" alt="Moto G" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Moto G<br>(XT1032)</td>
+<td>4.4</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>130mm</td>
+<td>11mm</td>
+<td>2070mAh</td>
+<td>Dec 2013</td>
+<td>&nbsp;</td>
+<td>143g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>720 x 1280</td>
+<td>1.2GHz<br>4 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One Max.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One Max.jpg" alt="One Max" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One Max</td>
+<td>4.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>83mm</td>
+<td>165mm</td>
+<td>10mm</td>
+<td>3300mAh</td>
+<td>Nov 2013</td>
+<td>Yes</td>
+<td>217g</td>
+<td>5.9&#34;</td>
+<td>Capacitive,<br>S-LCD3</td>
+<td>1080 x 1920</td>
+<td>1.7GHz<br>4 cores</td>
+<td>2GB</td>
+<td>32GB</td>
+<td>b/g/n/ac</td>
+<td>4 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Trooper X4.5.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Trooper X4.5.jpg" alt="Trooper X4.5" height="75" border="0"></a></td>
+<td>Kazam</td>
+<td>Trooper X4.5</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>113mm</td>
+<td>10mm</td>
+<td>1750mAh</td>
+<td>Nov 2013</td>
+<td>&nbsp;</td>
+<td>0g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1.2GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Nexus 5.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Nexus 5.jpg" alt="Nexus 5" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Nexus 5</td>
+<td>4.4</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>69mm</td>
+<td>138mm</td>
+<td>9mm</td>
+<td>2300mAh</td>
+<td>Nov 2013</td>
+<td>Yes</td>
+<td>130g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>1080 x 1920</td>
+<td>2.3GHz<br>4 cores</td>
+<td>2GB</td>
+<td>32GB</td>
+<td>b/g/n/ac</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Express 2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Express 2.jpg" alt="Galaxy Express 2" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Express 2</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>66mm</td>
+<td>132mm</td>
+<td>10mm</td>
+<td>2100mAh</td>
+<td>Oct 2013</td>
+<td>Yes</td>
+<td>134g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>540 x 960</td>
+<td>1.7GHz<br>2 cores</td>
+<td>1.5GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Z1.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Z1.jpg" alt="Xperia Z1" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia Z1<br>(C6903)</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>74mm</td>
+<td>144mm</td>
+<td>9mm</td>
+<td>3000mAh</td>
+<td>Oct 2013</td>
+<td>Yes</td>
+<td>170g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>1080 x 1920</td>
+<td>2.2GHz<br>4 cores</td>
+<td>2GB</td>
+<td>16GB</td>
+<td>b/g/n/ac</td>
+<td>21 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/G2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_G2.jpg" alt="G2" height="75" border="0"></a></td>
+<td>LG</td>
+<td>G2<br>(D802)</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>71mm</td>
+<td>139mm</td>
+<td>9mm</td>
+<td>3000mAh</td>
+<td>Oct 2013</td>
+<td>Yes</td>
+<td>143g</td>
+<td>5.2&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>1080 x 1920</td>
+<td>2.3GHz<br>4 cores</td>
+<td>2GB</td>
+<td>32GB</td>
+<td>b/g/n/ac</td>
+<td>13 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Desire 500.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire 500.jpg" alt="Desire 500" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire 500</td>
+<td>4.1</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>132mm</td>
+<td>10mm</td>
+<td>1800mAh</td>
+<td>Oct 2013</td>
+<td>&nbsp;</td>
+<td>123g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1.2GHz<br>4 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Note 3.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Note 3.jpg" alt="Galaxy Note 3" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Note 3<br>(N9005)</td>
+<td>4.3</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>79mm</td>
+<td>151mm</td>
+<td>8mm</td>
+<td>3200mAh</td>
+<td>Sep 2013</td>
+<td>Yes</td>
+<td>168g</td>
+<td>5.7&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>1080 x 1920</td>
+<td>2.3GHz<br>4 cores</td>
+<td>3GB</td>
+<td>64GB</td>
+<td>b/g/n/ac</td>
+<td>13 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus L1 ii.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus L1 ii.jpg" alt="Optimus L1 ii" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus L1 ii<br>(E410)</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>103mm</td>
+<td>12mm</td>
+<td>1540mAh</td>
+<td>Sep 2013</td>
+<td>&nbsp;</td>
+<td>105g</td>
+<td>3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>1.5GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>2 MP<br>No flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Z Ultra.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Z Ultra.jpg" alt="Xperia Z Ultra" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia Z Ultra<br>(C6833)</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>92mm</td>
+<td>179mm</td>
+<td>7mm</td>
+<td>3050mAh</td>
+<td>Sep 2013</td>
+<td>Yes</td>
+<td>212g</td>
+<td>6.4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>1080 x 1920</td>
+<td>2.2GHz<br>4 cores</td>
+<td>2GB</td>
+<td>16GB</td>
+<td>b/g/n/ac</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid S1.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid S1.jpg" alt="Liquid S1" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid S1</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>83mm</td>
+<td>163mm</td>
+<td>10mm</td>
+<td>2400mAh</td>
+<td>Sep 2013</td>
+<td>&nbsp;</td>
+<td>195g</td>
+<td>5.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>720 x 1280</td>
+<td>1.2GHz<br>4 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia ZR.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia ZR.jpg" alt="Xperia ZR" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia ZR<br>(C5503)</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>131mm</td>
+<td>10mm</td>
+<td>2300mAh</td>
+<td>Aug 2013</td>
+<td>Yes</td>
+<td>138g</td>
+<td>4.55&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>4 cores</td>
+<td>2GB</td>
+<td>8GB</td>
+<td>b/g/n/ac</td>
+<td>13 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Ace 3 LTE.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Ace 3 LTE.jpg" alt="Galaxy Ace 3 LTE" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Ace 3 LTE<br>(GT-S7275R)</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>121mm</td>
+<td>10mm</td>
+<td>1800mAh</td>
+<td>Aug 2013</td>
+<td>Yes</td>
+<td>120g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1920 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Ace 3.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Ace 3.jpg" alt="Galaxy Ace 3" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Ace 3<br>(GT-S7270)</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>121mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Aug 2013</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1920 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One Mini.jpg" alt="One Mini" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One Mini</td>
+<td>4.4</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>132mm</td>
+<td>9mm</td>
+<td>1800mAh</td>
+<td>Aug 2013</td>
+<td>Yes</td>
+<td>122g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>S-LCD2</td>
+<td>720 x 1280</td>
+<td>1.4GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>4 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia M.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia M.jpg" alt="Xperia M" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia M<br>(C1905)</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>124mm</td>
+<td>9mm</td>
+<td>1750mAh</td>
+<td>Aug 2013</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz<br>2 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 4 Active.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 4 Active.jpg" alt="Galaxy S 4 Active" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 4 Active<br>(GT-I9295)</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>71mm</td>
+<td>140mm</td>
+<td>9mm</td>
+<td>2600mAh</td>
+<td>Jul 2013</td>
+<td>Yes</td>
+<td>153g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>1080 x 1920</td>
+<td>1.9GHz<br>4 cores</td>
+<td>2GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1080 x 30<br>1920fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend P6.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend P6.jpg" alt="Ascend P6" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend P6</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>66mm</td>
+<td>133mm</td>
+<td>6mm</td>
+<td>2000mAh</td>
+<td>Jul 2013</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4.7&#34;</td>
+<td>Capative,<br>IPS+ LCD</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>4 cores</td>
+<td>2GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1080 x 30<br>1920fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 4 Zoom.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 4 Zoom.jpg" alt="Galaxy S 4 Zoom" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 4 Zoom</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>126mm</td>
+<td>15mm</td>
+<td>2330mAh</td>
+<td>Jul 2013</td>
+<td>&nbsp;</td>
+<td>208g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>540 x 960</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1.5GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>16 MP<br>Xenon flash</td>
+<td>1080 x 30<br>1920fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 4 Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 4 Mini.jpg" alt="Galaxy S 4 Mini" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 4 Mini<br>(I9195)</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>125mm</td>
+<td>9mm</td>
+<td>1900mAh</td>
+<td>Jul 2013</td>
+<td>Yes</td>
+<td>107g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>540 x 960</td>
+<td>1.7GHz<br>2 cores</td>
+<td>1.5GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Mega 6.3.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Mega 6.3.jpg" alt="Galaxy Mega 6.3" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Mega 6.3<br>(I9200)</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>88mm</td>
+<td>168mm</td>
+<td>8mm</td>
+<td>3200mAh</td>
+<td>Jul 2013</td>
+<td>Yes</td>
+<td>199g</td>
+<td>6.3&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>720 x 1280</td>
+<td>1.7GHz<br>2 cores</td>
+<td>1.5GB</td>
+<td>16GB</td>
+<td>b/g/n/ac</td>
+<td>8 MP<br>LED flash</td>
+<td>1080 x 30<br>1920fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Mega 5.8.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Mega 5.8.jpg" alt="Galaxy Mega 5.8" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Mega 5.8<br>(I9150)</td>
+<td>4.2</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>82mm</td>
+<td>163mm</td>
+<td>9mm</td>
+<td>2600mAh</td>
+<td>Jul 2013</td>
+<td>&nbsp;</td>
+<td>182g</td>
+<td>5.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>540 x 960</td>
+<td>1.4GHz<br>2 cores</td>
+<td>1.5GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1080 x 30<br>1920fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Smart Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Smart Mini.jpg" alt="Smart Mini" height="75" border="0"></a></td>
+<td>TCT</td>
+<td>Smart Mini</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>115mm</td>
+<td>12mm</td>
+<td>1500mAh</td>
+<td>Jun 2013</td>
+<td>&nbsp;</td>
+<td>118g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>2 MP<br>No flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend P2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend P2.jpg" alt="Ascend P2" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend P2</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>136mm</td>
+<td>8mm</td>
+<td>2420mAh</td>
+<td>Jun 2013</td>
+<td>Yes</td>
+<td>122g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>4 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>13 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Fonepad.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Fonepad.jpg" alt="Fonepad" height="75" border="0"></a></td>
+<td>Asus</td>
+<td>Fonepad</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>120mm</td>
+<td>196mm</td>
+<td>10mm</td>
+<td>4270mAh</td>
+<td>May 2013</td>
+<td>&nbsp;</td>
+<td>340g</td>
+<td>7&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>800 x 1280</td>
+<td>1.2GHz</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid E2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid E2.jpg" alt="Liquid E2" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid E2</td>
+<td>4.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>131mm</td>
+<td>10mm</td>
+<td>2000mAh</td>
+<td>May 2013</td>
+<td>&nbsp;</td>
+<td>140g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>540 x 960</td>
+<td>1.2GHz<br>4 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1080 x 30<br>1920fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/T2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_T2.jpg" alt="T2" height="75" border="0"></a></td>
+<td>Lumigon</td>
+<td>T2</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>116mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>May 2013</td>
+<td>&nbsp;</td>
+<td>0g</td>
+<td>3.8&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 800</td>
+<td>1.4GHz</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend Mate.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend Mate.jpg" alt="Ascend Mate" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend Mate</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>86mm</td>
+<td>164mm</td>
+<td>10mm</td>
+<td>4050mAh</td>
+<td>May 2013</td>
+<td>&nbsp;</td>
+<td>198g</td>
+<td>6.1&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>4 cores</td>
+<td>2GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia L.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia L.jpg" alt="Xperia L" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia L<br>(C2105)</td>
+<td>4.1</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>129mm</td>
+<td>10mm</td>
+<td>1750mAh</td>
+<td>May 2013</td>
+<td>&nbsp;</td>
+<td>137g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz<br>2 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Blade G.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Blade G.jpg" alt="Blade G" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Blade G</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>133mm</td>
+<td>9mm</td>
+<td>2000mAh</td>
+<td>May 2013</td>
+<td>&nbsp;</td>
+<td>140g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>480 x 854</td>
+<td>1.2GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/B15.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_B15.jpg" alt="B15" height="75" border="0"></a></td>
+<td>Cat</td>
+<td>B15</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>70mm</td>
+<td>125mm</td>
+<td>15mm</td>
+<td>2000mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>170g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 854</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus L5 ii.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus L5 ii.jpg" alt="Optimus L5 ii" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus L5 ii<br>(E460)</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>118mm</td>
+<td>9mm</td>
+<td>1700mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>103g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 4.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 4.jpg" alt="Galaxy S 4" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 4<br>(I9505)</td>
+<td>4.3</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>70mm</td>
+<td>137mm</td>
+<td>8mm</td>
+<td>2600mAh</td>
+<td>Apr 2013</td>
+<td>Yes</td>
+<td>130g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>1080 x 1920</td>
+<td>1.9GHz<br>4 cores</td>
+<td>2GB</td>
+<td>32GB</td>
+<td>b/g/n/ac</td>
+<td>13 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia SP.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia SP.jpg" alt="Xperia SP" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia SP<br>(C5302)</td>
+<td>4.1</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>131mm</td>
+<td>10mm</td>
+<td>2370mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>155g</td>
+<td>4.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>720 x 1280</td>
+<td>1.7GHz<br>2 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia SP LTE.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia SP LTE.jpg" alt="Xperia SP LTE" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia SP LTE<br>(C5303)</td>
+<td>4.1</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>131mm</td>
+<td>10mm</td>
+<td>2370mAh</td>
+<td>Apr 2013</td>
+<td>Yes</td>
+<td>155g</td>
+<td>4.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>720 x 1280</td>
+<td>1.7GHz<br>2 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Multiphone 5000 DUO.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Multiphone 5000 DUO.jpg" alt="Multiphone 5000 DUO" height="75" border="0"></a></td>
+<td>Prestigio</td>
+<td>Multiphone 5000 DUO</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>79mm</td>
+<td>149mm</td>
+<td>10mm</td>
+<td>2200mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>199g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1.2GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Multiphone 4500 DUO.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Multiphone 4500 DUO.jpg" alt="Multiphone 4500 DUO" height="75" border="0"></a></td>
+<td>Prestigio</td>
+<td>Multiphone 4500 DUO</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>69mm</td>
+<td>135mm</td>
+<td>9mm</td>
+<td>1850mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>158g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>540 x 960</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend Y300.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend Y300.jpg" alt="Ascend Y300" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend Y300</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>125mm</td>
+<td>11mm</td>
+<td>1730mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Young.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Young.jpg" alt="Galaxy Young" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Young<br>(S6310)</td>
+<td>4.1</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>110mm</td>
+<td>13mm</td>
+<td>1300mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>112g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>768MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>No flash</td>
+<td>640 x 480<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia E.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia E.jpg" alt="Xperia E" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia E<br>(C1505)</td>
+<td>4.1</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>114mm</td>
+<td>11mm</td>
+<td>1530mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>116g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Fame.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Fame.jpg" alt="Galaxy Fame" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Fame<br>(S6810)</td>
+<td>4.1</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>113mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Apr 2013</td>
+<td>&nbsp;</td>
+<td>121g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>25fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend G615.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend G615.jpg" alt="Ascend G615" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend G615</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>134mm</td>
+<td>11mm</td>
+<td>2150mAh</td>
+<td>Mar 2013</td>
+<td>&nbsp;</td>
+<td>145g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>IPS+ LCD</td>
+<td>720 x 1280</td>
+<td>1.4GHz<br>4 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend G510.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend G510.jpg" alt="Ascend G510" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend G510</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>134mm</td>
+<td>10mm</td>
+<td>1700mAh</td>
+<td>Mar 2013</td>
+<td>&nbsp;</td>
+<td>150g</td>
+<td>4.5&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>480 x 854</td>
+<td>1.2GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One Touch Star.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One Touch Star.jpg" alt="One Touch Star" height="75" border="0"></a></td>
+<td>Alcatel</td>
+<td>One Touch Star</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>120mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Mar 2013</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>AMOLED</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One.jpg" alt="One" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One</td>
+<td>4.4</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>137mm</td>
+<td>9mm</td>
+<td>2300mAh</td>
+<td>Mar 2013</td>
+<td>Yes</td>
+<td>143g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>S-LCD2</td>
+<td>1080 x 1920</td>
+<td>1.7GHz<br>4 cores</td>
+<td>2GB</td>
+<td>32GB</td>
+<td>b/g/n/ac</td>
+<td>4 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy XCover 2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy XCover 2.jpg" alt="Galaxy XCover 2" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy XCover 2<br>(S7710)</td>
+<td>4.1</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>131mm</td>
+<td>12mm</td>
+<td>1700mAh</td>
+<td>Mar 2013</td>
+<td>&nbsp;</td>
+<td>149g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One Touch TPop.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One Touch TPop.jpg" alt="One Touch TPop" height="75" border="0"></a></td>
+<td>Alcatel</td>
+<td>One Touch TPop</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>115mm</td>
+<td>12mm</td>
+<td>1400mAh</td>
+<td>Feb 2013</td>
+<td>&nbsp;</td>
+<td>118g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>2 MP<br>No flash</td>
+<td>480 x 320<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Z.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Z.jpg" alt="Xperia Z" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia Z<br>(C6603)</td>
+<td>4.2</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>71mm</td>
+<td>139mm</td>
+<td>8mm</td>
+<td>2330mAh</td>
+<td>Feb 2013</td>
+<td>Yes</td>
+<td>146g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>1080 x 1920</td>
+<td>1.5GHz<br>4 cores</td>
+<td>2GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>13 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/RAZR HD.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_RAZR HD.jpg" alt="RAZR HD" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>RAZR HD<br>(XT925)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>132mm</td>
+<td>8mm</td>
+<td>2500mAh</td>
+<td>Feb 2013</td>
+<td>Yes</td>
+<td>146g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Blade III.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Blade III.jpg" alt="Blade III" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Blade III</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>123mm</td>
+<td>10mm</td>
+<td>1600mAh</td>
+<td>Feb 2013</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>320 x 240<br>28fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/CloudMobile S500.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_CloudMobile S500.jpg" alt="CloudMobile S500" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>CloudMobile S500</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>66mm</td>
+<td>127mm</td>
+<td>10mm</td>
+<td>1460mAh</td>
+<td>Jan 2013</td>
+<td>&nbsp;</td>
+<td>122g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1080 x 30<br>1920fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One SV.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One SV.jpg" alt="One SV" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One SV</td>
+<td>4.2</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>128mm</td>
+<td>9mm</td>
+<td>1800mAh</td>
+<td>Jan 2013</td>
+<td>Yes</td>
+<td>122g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>S-LCD2</td>
+<td>480 x 800</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend G330.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend G330.jpg" alt="Ascend G330" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend G330</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>123mm</td>
+<td>11mm</td>
+<td>1500mAh</td>
+<td>Dec 2012</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid Z110 Duo.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid Z110 Duo.jpg" alt="Liquid Z110 Duo" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid Z110 Duo</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>110mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Nov 2012</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/OT-983.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_OT-983.jpg" alt="OT-983" height="75" border="0"></a></td>
+<td>Alcatel</td>
+<td>OT-983</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>115mm</td>
+<td>13mm</td>
+<td>1300mAh</td>
+<td>Nov 2012</td>
+<td>&nbsp;</td>
+<td>100g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>No flash</td>
+<td>640 x 480<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 3 Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 3 Mini.jpg" alt="Galaxy S 3 Mini" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 3 Mini<br>(I8190)</td>
+<td>4.1</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>122mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Nov 2012</td>
+<td>&nbsp;</td>
+<td>112g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Nexus 4.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Nexus 4.jpg" alt="Nexus 4" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Nexus 4<br>(E960)</td>
+<td>4.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>69mm</td>
+<td>134mm</td>
+<td>9mm</td>
+<td>2100mAh</td>
+<td>Nov 2012</td>
+<td>&nbsp;</td>
+<td>139g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>768 x 1280</td>
+<td>1.5GHz<br>4 cores</td>
+<td>2GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 3 LTE.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 3 LTE.jpg" alt="Galaxy S 3 LTE" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 3 LTE<br>(i9305)</td>
+<td>4.1</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>71mm</td>
+<td>137mm</td>
+<td>9mm</td>
+<td>2100mAh</td>
+<td>Oct 2012</td>
+<td>Yes</td>
+<td>131g</td>
+<td>4.8&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>720 x 1280</td>
+<td>1.4GHz<br>4 cores</td>
+<td>2GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend P1 LTE.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend P1 LTE.jpg" alt="Ascend P1 LTE" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend P1 LTE</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>133mm</td>
+<td>10mm</td>
+<td>1800mAh</td>
+<td>Oct 2012</td>
+<td>Yes</td>
+<td>135g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>540 x 950</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One XL.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One XL.jpg" alt="One XL" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One XL</td>
+<td>4.1</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>70mm</td>
+<td>135mm</td>
+<td>9mm</td>
+<td>1800mAh</td>
+<td>Oct 2012</td>
+<td>Yes</td>
+<td>129g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>S-LCD2</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>32GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Note 2 LTE.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Note 2 LTE.jpg" alt="Galaxy Note 2 LTE" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Note 2 LTE<br>(N7105)</td>
+<td>4.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>81mm</td>
+<td>151mm</td>
+<td>9mm</td>
+<td>3100mAh</td>
+<td>Oct 2012</td>
+<td>Yes</td>
+<td>183g</td>
+<td>5.5&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>720 x 1280</td>
+<td>1.6GHz<br>4 cores</td>
+<td>2GB</td>
+<td>64GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S Duos.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S Duos.jpg" alt="Galaxy S Duos" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S Duos<br>(S7562)</td>
+<td>4.0</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>122mm</td>
+<td>11mm</td>
+<td>1500mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>768MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus VU.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus VU.jpg" alt="Optimus VU" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus VU</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>90mm</td>
+<td>140mm</td>
+<td>9mm</td>
+<td>2100mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>168g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>IPS LCD</td>
+<td>768 x 1024</td>
+<td>1.5GHz<br>4 cores</td>
+<td>1GB</td>
+<td>32GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One X+.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One X+.jpg" alt="One X+" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One X+</td>
+<td>4.1</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>70mm</td>
+<td>134mm</td>
+<td>9mm</td>
+<td>2100mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>S-LCD2</td>
+<td>720 x 1280</td>
+<td>1.7GHz<br>4 cores</td>
+<td>1GB</td>
+<td>64GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>28fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Desire X.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire X.jpg" alt="Desire X" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire X</td>
+<td>4.0</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>119mm</td>
+<td>9mm</td>
+<td>1650mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>114g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>768MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>854 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia J.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia J.jpg" alt="Xperia J" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia J<br>(ST26i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>124mm</td>
+<td>9mm</td>
+<td>1750mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>124g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Razr i.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Razr i.jpg" alt="Razr i" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Razr i<br>(XT890)</td>
+<td>4.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>123mm</td>
+<td>8mm</td>
+<td>2000mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>126g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>540 x 960</td>
+<td>2GHz</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Note 2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Note 2.jpg" alt="Galaxy Note 2" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Note 2<br>(N7100)</td>
+<td>4.1</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>81mm</td>
+<td>151mm</td>
+<td>9mm</td>
+<td>3100mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>183g</td>
+<td>5.5&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>720 x 1280</td>
+<td>1.6GHz<br>4 cores</td>
+<td>2GB</td>
+<td>64GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend Y201.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend Y201.jpg" alt="Ascend Y201" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend Y201<br>(U8666)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>116mm</td>
+<td>12mm</td>
+<td>1400mAh</td>
+<td>Oct 2012</td>
+<td>&nbsp;</td>
+<td>140g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia T.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia T.jpg" alt="Xperia T" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia T<br>(LT30p)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>129mm</td>
+<td>9mm</td>
+<td>1850mAh</td>
+<td>Sep 2012</td>
+<td>&nbsp;</td>
+<td>139g</td>
+<td>4.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>13 MP<br>LED flash</td>
+<td>1280 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Miro.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Miro.jpg" alt="Xperia Miro" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia Miro<br>(ST23i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>113mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Sep 2012</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Motosmart.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Motosmart.jpg" alt="Motosmart" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Motosmart<br>(XT390)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>116mm</td>
+<td>11mm</td>
+<td>1400mAh</td>
+<td>Sep 2012</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>720 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid Glow.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid Glow.jpg" alt="Liquid Glow" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid Glow<br>(E330)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>117mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Aug 2012</td>
+<td>&nbsp;</td>
+<td>125g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid Gallant Duo.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid Gallant Duo.jpg" alt="Liquid Gallant Duo" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid Gallant Duo</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>66mm</td>
+<td>129mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Aug 2012</td>
+<td>&nbsp;</td>
+<td>145g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>540 x 960</td>
+<td>1GHz</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Go.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Go.jpg" alt="Xperia Go" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia Go<br>(ST27i)</td>
+<td>2.3</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>111mm</td>
+<td>10mm</td>
+<td>1305mAh</td>
+<td>Jul 2012</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus 4X HD.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus 4X HD.jpg" alt="Optimus 4X HD" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus 4X HD<br>(P880)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>132mm</td>
+<td>9mm</td>
+<td>2150mAh</td>
+<td>Jun 2012</td>
+<td>&nbsp;</td>
+<td>133g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>4 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Beam.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Beam.jpg" alt="Galaxy Beam" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Beam<br>(I8530)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>124mm</td>
+<td>13mm</td>
+<td>2000mAh</td>
+<td>Jun 2012</td>
+<td>&nbsp;</td>
+<td>145g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>768MB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend Y100.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend Y100.jpg" alt="Ascend Y100" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend Y100<br>(U8185)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>56mm</td>
+<td>107mm</td>
+<td>11mm</td>
+<td>1050mAh</td>
+<td>Jun 2012</td>
+<td>&nbsp;</td>
+<td>100g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>800MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>2 MP<br>No flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Desire C.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire C.jpg" alt="Desire C" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire C</td>
+<td>4.0</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>107mm</td>
+<td>12mm</td>
+<td>1230mAh</td>
+<td>Jun 2012</td>
+<td>&nbsp;</td>
+<td>100g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/San Diego.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_San Diego.jpg" alt="San Diego" height="75" border="0"></a></td>
+<td>Gigabyte</td>
+<td>San Diego</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>123mm</td>
+<td>10mm</td>
+<td>0mAh</td>
+<td>Jun 2012</td>
+<td>&nbsp;</td>
+<td>117g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>600 x 1024</td>
+<td>1.6GHz</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus L7.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus L7.jpg" alt="Optimus L7" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus L7<br>(P700)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>126mm</td>
+<td>9mm</td>
+<td>1700mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>122g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus L5.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus L5.jpg" alt="Optimus L5" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus L5<br>(E610)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>67mm</td>
+<td>118mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>125g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 3.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 3.jpg" alt="Galaxy S 3" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 3<br>(I9300)</td>
+<td>4.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>71mm</td>
+<td>137mm</td>
+<td>9mm</td>
+<td>2100mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>133g</td>
+<td>4.8&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>720 x 1280</td>
+<td>1.4GHz<br>4 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia P.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia P.jpg" alt="Xperia P" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia P<br>(LT22i)</td>
+<td>2.3</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>122mm</td>
+<td>11mm</td>
+<td>1305mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>540 x 960</td>
+<td>1GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Ace 2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Ace 2.jpg" alt="Galaxy Ace 2" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Ace 2<br>(I8160)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>118mm</td>
+<td>11mm</td>
+<td>1500mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>122g</td>
+<td>3.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>800MHz</td>
+<td>768MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia U.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia U.jpg" alt="Xperia U" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia U</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>54mm</td>
+<td>112mm</td>
+<td>12mm</td>
+<td>1320mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 854</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Razr Maxx.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Razr Maxx.jpg" alt="Razr Maxx" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Razr Maxx<br>(XT910)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>69mm</td>
+<td>131mm</td>
+<td>9mm</td>
+<td>3300mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>145g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED Advanced</td>
+<td>540 x 960</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S Advance.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S Advance.jpg" alt="Galaxy S Advance" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S Advance<br>(I9070)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>123mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>768MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend P1.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend P1.jpg" alt="Ascend P1" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend P1</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>127mm</td>
+<td>8mm</td>
+<td>1670mAh</td>
+<td>May 2012</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>540 x 960</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One V.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One V.jpg" alt="One V" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One V</td>
+<td>4.0</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>120mm</td>
+<td>9mm</td>
+<td>1500mAh</td>
+<td>Apr 2012</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>S-LCD2</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One S.jpg" alt="One S" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One S</td>
+<td>4.0</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>131mm</td>
+<td>8mm</td>
+<td>1650mAh</td>
+<td>Apr 2012</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>540 x 960</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One X.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One X.jpg" alt="One X" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>One X</td>
+<td>4.0</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>70mm</td>
+<td>134mm</td>
+<td>9mm</td>
+<td>1800mAh</td>
+<td>Apr 2012</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>S-LCD2</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>4 cores</td>
+<td>1GB</td>
+<td>32GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ascend G300.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ascend G300.jpg" alt="Ascend G300" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ascend G300<br>(U8815)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>123mm</td>
+<td>11mm</td>
+<td>1500mAh</td>
+<td>Apr 2012</td>
+<td>&nbsp;</td>
+<td>140g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>3GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>800 x 480<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Eluga.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Eluga.jpg" alt="Eluga" height="75" border="0"></a></td>
+<td>Panasonic</td>
+<td>Eluga</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>123mm</td>
+<td>8mm</td>
+<td>1150mAh</td>
+<td>Apr 2012</td>
+<td>&nbsp;</td>
+<td>103g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>OLED</td>
+<td>540 x 960</td>
+<td>1GHz</td>
+<td>1GB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Pro-Smart.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Pro-Smart.jpg" alt="Pro-Smart" height="75" border="0"></a></td>
+<td>JCB</td>
+<td>Pro-Smart</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>125mm</td>
+<td>21mm</td>
+<td>2000mAh</td>
+<td>Apr 2012</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>256MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus L3.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus L3.jpg" alt="Optimus L3" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus L3<br>(E400)</td>
+<td>2.3</td>
+<td>Optimus UI</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>103mm</td>
+<td>12mm</td>
+<td>1500mAh</td>
+<td>Mar 2012</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>800MHz</td>
+<td>384MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>3.1 MP<br>No flash</td>
+<td>640 x 480<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia S.jpg" alt="Xperia S" height="75" border="0"></a></td>
+<td>Sony</td>
+<td>Xperia S<br>(LT26i)</td>
+<td>4.1</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>128mm</td>
+<td>11mm</td>
+<td>1750mAh</td>
+<td>Mar 2012</td>
+<td>&nbsp;</td>
+<td>144g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>720 x 1280</td>
+<td>1.5GHz<br>2 cores</td>
+<td>1GB</td>
+<td>32GB</td>
+<td>b/g/n</td>
+<td>12 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Y Duos.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Y Duos.jpg" alt="Galaxy Y Duos" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Y Duos<br>(S6102)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>110mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Mar 2012</td>
+<td>&nbsp;</td>
+<td>109g</td>
+<td>3.1&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>832MHz</td>
+<td>290MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/One Touch Ultra 995.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_One Touch Ultra 995.jpg" alt="One Touch Ultra 995" height="75" border="0"></a></td>
+<td>Alcatel</td>
+<td>One Touch Ultra 995</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>128mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Mar 2012</td>
+<td>&nbsp;</td>
+<td>124g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1.4GHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Mini 2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Mini 2.jpg" alt="Galaxy Mini 2" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Mini 2<br>(S6500)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>110mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Mar 2012</td>
+<td>&nbsp;</td>
+<td>105g</td>
+<td>3.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>No flash</td>
+<td>640 x 480<br>25fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Ace Plus.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Ace Plus.jpg" alt="Galaxy Ace Plus" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Ace Plus<br>(S7500)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>115mm</td>
+<td>11mm</td>
+<td>1300mAh</td>
+<td>Mar 2012</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>3GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Defy Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Defy Mini.jpg" alt="Defy Mini" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Defy Mini<br>(XT320)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>109mm</td>
+<td>13mm</td>
+<td>1650mAh</td>
+<td>Mar 2012</td>
+<td>&nbsp;</td>
+<td>107g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>LED flash</td>
+<td>480 x 320<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Y.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Y.jpg" alt="Galaxy Y" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Y<br>(S5360)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>58mm</td>
+<td>104mm</td>
+<td>12mm</td>
+<td>1200mAh</td>
+<td>Feb 2012</td>
+<td>&nbsp;</td>
+<td>97g</td>
+<td>3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>832MHz</td>
+<td>256MB</td>
+<td>160MB</td>
+<td>b/g/n</td>
+<td>2 MP<br>No flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Prada 3.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Prada 3.jpg" alt="Prada 3" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Prada 3</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>69mm</td>
+<td>128mm</td>
+<td>9mm</td>
+<td>1540mAh</td>
+<td>Feb 2012</td>
+<td>&nbsp;</td>
+<td>138g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Motoluxe.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Motoluxe.jpg" alt="Motoluxe" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Motoluxe<br>(XT615)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>118mm</td>
+<td>10mm</td>
+<td>1400mAh</td>
+<td>Feb 2012</td>
+<td>&nbsp;</td>
+<td>124g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>800 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Honor.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Honor.jpg" alt="Honor" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Honor<br>(U8860)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>122mm</td>
+<td>11mm</td>
+<td>1930mAh</td>
+<td>Jan 2012</td>
+<td>&nbsp;</td>
+<td>140g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1.4GHz</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Extreme Xcover.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Extreme Xcover.jpg" alt="Galaxy Extreme Xcover" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Extreme Xcover<br>(S5690)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>66mm</td>
+<td>122mm</td>
+<td>12mm</td>
+<td>1500mAh</td>
+<td>Jan 2012</td>
+<td>&nbsp;</td>
+<td>100g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>150MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>LED flash</td>
+<td>640 x 480<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Vision.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Vision.jpg" alt="Vision" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Vision<br>(U8850)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>118mm</td>
+<td>10mm</td>
+<td>1400mAh</td>
+<td>Dec 2011</td>
+<td>&nbsp;</td>
+<td>121g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>720 x 30<br>1280fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Pro+.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Pro+.jpg" alt="Pro+" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Pro+<br>(MB632)</td>
+<td>2.3</td>
+<td>Motoblur</td>
+<td>Touch Qwerty</td>
+<td>62mm</td>
+<td>120mm</td>
+<td>12mm</td>
+<td>1550mAh</td>
+<td>Dec 2011</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>3.1&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 640</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Active.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Active.jpg" alt="Xperia Active" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Active<br>(ST17i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>55mm</td>
+<td>92mm</td>
+<td>17mm</td>
+<td>1200mAh</td>
+<td>Dec 2011</td>
+<td>&nbsp;</td>
+<td>111g</td>
+<td>3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Live With Walkman.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Live With Walkman.jpg" alt="Live With Walkman" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Live With Walkman</td>
+<td>2.3</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>106mm</td>
+<td>14mm</td>
+<td>1200mAh</td>
+<td>Dec 2011</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>320MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Nexus.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Nexus.jpg" alt="Galaxy Nexus" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Nexus<br>(i9250)</td>
+<td>4.3</td>
+<td>None</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>136mm</td>
+<td>9mm</td>
+<td>1750mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>720 x 1280</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Sensation XL.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Sensation XL.jpg" alt="Sensation XL" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Sensation XL</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>71mm</td>
+<td>133mm</td>
+<td>10mm</td>
+<td>1600mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>163g</td>
+<td>4.7&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>480 x 800</td>
+<td>1.5GHz</td>
+<td>768MB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S Plus.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S Plus.jpg" alt="Galaxy S Plus" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S Plus<br>(I9001)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>122mm</td>
+<td>10mm</td>
+<td>1650mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>119g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Razr.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Razr.jpg" alt="Razr" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Razr<br>(XT910)</td>
+<td>4.0</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>69mm</td>
+<td>131mm</td>
+<td>7mm</td>
+<td>1780mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>127g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>540 x 960</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Explorer.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Explorer.jpg" alt="Explorer" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Explorer</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>103mm</td>
+<td>13mm</td>
+<td>1230mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>108g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>640 x 480<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid Express.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid Express.jpg" alt="Liquid Express" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid Express<br>(E320)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>115mm</td>
+<td>13mm</td>
+<td>1300mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ideos X3 Blaze.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ideos X3 Blaze.jpg" alt="Ideos X3 Blaze" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ideos X3 Blaze<br>(U8510)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>110mm</td>
+<td>11mm</td>
+<td>1200mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>104g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Note.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Note.jpg" alt="Galaxy Note" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Note<br>(I9220)</td>
+<td>4.0</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>83mm</td>
+<td>147mm</td>
+<td>10mm</td>
+<td>2500mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>178g</td>
+<td>5.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>800 x 1280</td>
+<td>1.4GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/San Francisco II.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_San Francisco II.jpg" alt="San Francisco II" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>San Francisco II<br>(Crescent)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>117mm</td>
+<td>11mm</td>
+<td>0mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Vivacity.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Vivacity.jpg" alt="Vivacity" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Vivacity<br>(Crescent)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>117mm</td>
+<td>11mm</td>
+<td>0mAh</td>
+<td>Nov 2011</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Neo V.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Neo V.jpg" alt="Xperia Neo V" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Neo V<br>(MT11i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>116mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Oct 2011</td>
+<td>&nbsp;</td>
+<td>126g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>320MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Sensation XE.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Sensation XE.jpg" alt="Sensation XE" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Sensation XE</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>126mm</td>
+<td>11mm</td>
+<td>1730mAh</td>
+<td>Oct 2011</td>
+<td>&nbsp;</td>
+<td>151g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>540 x 960</td>
+<td>1.5GHz<br>2 cores</td>
+<td>768MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy W.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy W.jpg" alt="Galaxy W" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy W<br>(I8150)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>116mm</td>
+<td>12mm</td>
+<td>1500mAh</td>
+<td>Oct 2011</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1.4GHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Pro.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Pro.jpg" alt="Xperia Pro" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Pro<br>(MK16i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch Slider</td>
+<td>57mm</td>
+<td>120mm</td>
+<td>14mm</td>
+<td>1500mAh</td>
+<td>Oct 2011</td>
+<td>&nbsp;</td>
+<td>142g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Tureis.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Tureis.jpg" alt="Tureis" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Tureis</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch Qwerty</td>
+<td>63mm</td>
+<td>112mm</td>
+<td>12mm</td>
+<td>1100mAh</td>
+<td>Oct 2011</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>2.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 240</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Arc S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Arc S.jpg" alt="Xperia Arc S" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Arc S<br>(LT18i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>125mm</td>
+<td>9mm</td>
+<td>1500mAh</td>
+<td>Oct 2011</td>
+<td>&nbsp;</td>
+<td>117g</td>
+<td>4.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Ray.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Ray.jpg" alt="Xperia Ray" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Ray<br>(ST18i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>53mm</td>
+<td>111mm</td>
+<td>9mm</td>
+<td>1500mAh</td>
+<td>Sep 2011</td>
+<td>&nbsp;</td>
+<td>100g</td>
+<td>3.3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Defy+.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Defy+.jpg" alt="Defy+" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Defy+<br>(MB526)</td>
+<td>2.3</td>
+<td>Motoblur</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>107mm</td>
+<td>13mm</td>
+<td>1700mAh</td>
+<td>Sep 2011</td>
+<td>&nbsp;</td>
+<td>118g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Libra.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Libra.jpg" alt="Libra" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Libra</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>56mm</td>
+<td>114mm</td>
+<td>12mm</td>
+<td>1250mAh</td>
+<td>Sep 2011</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Fire.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Fire.jpg" alt="Fire" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Fire<br>(XT311)</td>
+<td>2.3</td>
+<td>Motoblur</td>
+<td>Touch Qwerty</td>
+<td>58mm</td>
+<td>117mm</td>
+<td>13mm</td>
+<td>1420mAh</td>
+<td>Sep 2011</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>640 x 480<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Rapport.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Rapport.jpg" alt="Rapport" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Rapport<br>(U8160)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>104mm</td>
+<td>13mm</td>
+<td>1200mAh</td>
+<td>Aug 2011</td>
+<td>&nbsp;</td>
+<td>104g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>130MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Mini.jpg" alt="Xperia Mini" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Mini<br>(ST15i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>52mm</td>
+<td>88mm</td>
+<td>16mm</td>
+<td>1200mAh</td>
+<td>Aug 2011</td>
+<td>&nbsp;</td>
+<td>99g</td>
+<td>3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>320MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Mini Pro.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Mini Pro.jpg" alt="Xperia Mini Pro" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Mini Pro</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch Slider</td>
+<td>53mm</td>
+<td>92mm</td>
+<td>18mm</td>
+<td>1200mAh</td>
+<td>Aug 2011</td>
+<td>&nbsp;</td>
+<td>136g</td>
+<td>3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>320 x 480</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>320MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/OT-990.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_OT-990.jpg" alt="OT-990" height="75" border="0"></a></td>
+<td>Alcatel</td>
+<td>OT-990</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>116mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Aug 2011</td>
+<td>&nbsp;</td>
+<td>147g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>200MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Evo 3D.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Evo 3D.jpg" alt="Evo 3D" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Evo 3D</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>126mm</td>
+<td>11mm</td>
+<td>1730mAh</td>
+<td>Aug 2011</td>
+<td>&nbsp;</td>
+<td>170g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>540 x 960</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>Dual LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Monte Carlo.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Monte Carlo.jpg" alt="Monte Carlo" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Monte Carlo<br>(Skate)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>126mm</td>
+<td>10mm</td>
+<td>1400mAh</td>
+<td>Aug 2011</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Salsa.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Salsa.jpg" alt="Salsa" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Salsa</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>109mm</td>
+<td>12mm</td>
+<td>1520mAh</td>
+<td>Jul 2011</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>3.4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>720 x 576<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Neo.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Neo.jpg" alt="Xperia Neo" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Neo<br>(MT15i)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>116mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Jul 2011</td>
+<td>&nbsp;</td>
+<td>126g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>320MB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Barcelona.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Barcelona.jpg" alt="Barcelona" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Barcelona<br>(U8350)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch Qwerty</td>
+<td>63mm</td>
+<td>115mm</td>
+<td>10mm</td>
+<td>1200mAh</td>
+<td>Jul 2011</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>2.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Stockholm.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Stockholm.jpg" alt="Stockholm" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Stockholm<br>(U8160)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>104mm</td>
+<td>13mm</td>
+<td>1200mAh</td>
+<td>Jul 2011</td>
+<td>&nbsp;</td>
+<td>104g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>130MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus Chat.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus Chat.jpg" alt="Optimus Chat" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus Chat<br>(C550)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch Slider</td>
+<td>59mm</td>
+<td>109mm</td>
+<td>16mm</td>
+<td>1500mAh</td>
+<td>Jul 2011</td>
+<td>&nbsp;</td>
+<td>122g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>Transflective TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>140MB</td>
+<td>b/g</td>
+<td>3 MP<br>No flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus 3D.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus 3D.jpg" alt="Optimus 3D" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus 3D<br>(P920)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>129mm</td>
+<td>12mm</td>
+<td>1500mAh</td>
+<td>Jul 2011</td>
+<td>&nbsp;</td>
+<td>168g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>LCD</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1920 x 1080<br>90fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/ChaCha.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_ChaCha.jpg" alt="ChaCha" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>ChaCha</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch Qwerty</td>
+<td>65mm</td>
+<td>114mm</td>
+<td>11mm</td>
+<td>1250mAh</td>
+<td>Jun 2011</td>
+<td>&nbsp;</td>
+<td>124g</td>
+<td>2.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 320</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/858 Smart.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_858 Smart.jpg" alt="858 Smart" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>858 Smart<br>(U8160)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>104mm</td>
+<td>13mm</td>
+<td>1200mAh</td>
+<td>Jun 2011</td>
+<td>&nbsp;</td>
+<td>104g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>130MB</td>
+<td>b/g</td>
+<td>2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Sensation.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Sensation.jpg" alt="Sensation" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Sensation</td>
+<td>4.0</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>65mm</td>
+<td>126mm</td>
+<td>11mm</td>
+<td>1520mAh</td>
+<td>May 2011</td>
+<td>&nbsp;</td>
+<td>148g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>540 x 960</td>
+<td>1.2GHz<br>2 cores</td>
+<td>768MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus Black.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus Black.jpg" alt="Optimus Black" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus Black<br>(P970)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>122mm</td>
+<td>9mm</td>
+<td>1500mAh</td>
+<td>May 2011</td>
+<td>&nbsp;</td>
+<td>109g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>NOVA LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Atrix.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Atrix.jpg" alt="Atrix" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Atrix</td>
+<td>2.3</td>
+<td>Motoblur</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>118mm</td>
+<td>11mm</td>
+<td>1930mAh</td>
+<td>May 2011</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>540 x 960</td>
+<td>1GHz<br>2 cores</td>
+<td>1GB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Pro.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Pro.jpg" alt="Galaxy Pro" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Pro<br>(B7510)</td>
+<td>2.2</td>
+<td>TouchWiz</td>
+<td>Touch Qwerty</td>
+<td>67mm</td>
+<td>109mm</td>
+<td>11mm</td>
+<td>1350mAh</td>
+<td>Apr 2011</td>
+<td>&nbsp;</td>
+<td>106g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 240</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>320 x 240<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Cloud Touch.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Cloud Touch.jpg" alt="Cloud Touch" height="75" border="0"></a></td>
+<td>Inq</td>
+<td>Cloud Touch</td>
+<td>2.2</td>
+<td>Inq</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>114mm</td>
+<td>13mm</td>
+<td>1300mAh</td>
+<td>Apr 2011</td>
+<td>&nbsp;</td>
+<td>122g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>640 x 480<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S 2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S 2.jpg" alt="Galaxy S 2" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S 2<br>(i9100)</td>
+<td>4.1</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>66mm</td>
+<td>125mm</td>
+<td>8mm</td>
+<td>1650mAh</td>
+<td>Apr 2011</td>
+<td>&nbsp;</td>
+<td>116g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>Super AMOLED Plus</td>
+<td>480 x 800</td>
+<td>1.2GHz<br>2 cores</td>
+<td>1GB</td>
+<td>32GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Wildfire S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Wildfire S.jpg" alt="Wildfire S" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Wildfire S</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>101mm</td>
+<td>12mm</td>
+<td>1230mAh</td>
+<td>Apr 2011</td>
+<td>&nbsp;</td>
+<td>105g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>720 x 480<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Fit.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Fit.jpg" alt="Galaxy Fit" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Fit<br>(S5670)</td>
+<td>2.2</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>110mm</td>
+<td>13mm</td>
+<td>1350mAh</td>
+<td>Apr 2011</td>
+<td>&nbsp;</td>
+<td>109g</td>
+<td>3.3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>384MB</td>
+<td>160MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Desire S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire S.jpg" alt="Desire S" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire S</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>115mm</td>
+<td>12mm</td>
+<td>1450mAh</td>
+<td>Mar 2011</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>768MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Mini.jpg" alt="Galaxy Mini" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Mini<br>(S5570)</td>
+<td>2.2</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>110mm</td>
+<td>12mm</td>
+<td>1200mAh</td>
+<td>Mar 2011</td>
+<td>&nbsp;</td>
+<td>107g</td>
+<td>3.1&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>384MB</td>
+<td>164MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia PLAY.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia PLAY.jpg" alt="Xperia PLAY" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia PLAY<br>(R800i)</td>
+<td>2.3</td>
+<td>UXP</td>
+<td>Touch Slider</td>
+<td>62mm</td>
+<td>119mm</td>
+<td>16mm</td>
+<td>1500mAh</td>
+<td>Mar 2011</td>
+<td>&nbsp;</td>
+<td>175g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>400MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>800 x 480<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus 2X.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus 2X.jpg" alt="Optimus 2X" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus 2X<br>(P990)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>122mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Mar 2011</td>
+<td>&nbsp;</td>
+<td>139g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz<br>2 cores</td>
+<td>512MB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1920 x 1080<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Titan.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Titan.jpg" alt="Titan" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Titan<br>(U8800 aka IDEOS X5)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>62mm</td>
+<td>120mm</td>
+<td>12mm</td>
+<td>1500mAh</td>
+<td>Mar 2011</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>3.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>4GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Ace.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Ace.jpg" alt="Galaxy Ace" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Ace<br>(S5830)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>112mm</td>
+<td>12mm</td>
+<td>1350mAh</td>
+<td>Mar 2011</td>
+<td>&nbsp;</td>
+<td>113g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>278MB</td>
+<td>158MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia Arc.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia Arc.jpg" alt="Xperia Arc" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia Arc<br>(X12)</td>
+<td>4.0</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>125mm</td>
+<td>9mm</td>
+<td>1500mAh</td>
+<td>Mar 2011</td>
+<td>&nbsp;</td>
+<td>117g</td>
+<td>4.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>320MB</td>
+<td>b/g/n</td>
+<td>8 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Gio.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Gio.jpg" alt="Galaxy Gio" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Gio<br>(S5660)</td>
+<td>2.3</td>
+<td>TouchWiz</td>
+<td>Touch</td>
+<td>58mm</td>
+<td>111mm</td>
+<td>12mm</td>
+<td>1350mAh</td>
+<td>Feb 2011</td>
+<td>&nbsp;</td>
+<td>102g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>278MB</td>
+<td>158MB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>No flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Incredible S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Incredible S.jpg" alt="Incredible S" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Incredible S</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>120mm</td>
+<td>12mm</td>
+<td>1450mAh</td>
+<td>Feb 2011</td>
+<td>&nbsp;</td>
+<td>136g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>768MB</td>
+<td>1GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/beTouch E210.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_beTouch E210.jpg" alt="beTouch E210" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>beTouch E210</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch Qwerty</td>
+<td>63mm</td>
+<td>116mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Feb 2011</td>
+<td>&nbsp;</td>
+<td>109g</td>
+<td>2.6&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid Mt.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid Mt.jpg" alt="Liquid Mt" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid Mt</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>115mm</td>
+<td>14mm</td>
+<td>1500mAh</td>
+<td>Feb 2011</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>3.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus Me.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus Me.jpg" alt="Optimus Me" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus Me<br>(P350)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>53mm</td>
+<td>108mm</td>
+<td>13mm</td>
+<td>1250mAh</td>
+<td>Feb 2011</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>140MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>640 x 480<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy 551.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy 551.jpg" alt="Galaxy 551" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy 551<br>(I5510)</td>
+<td>2.2</td>
+<td>TouchWiz</td>
+<td>Touch Slider</td>
+<td>55mm</td>
+<td>111mm</td>
+<td>15mm</td>
+<td>1200mAh</td>
+<td>Jan 2011</td>
+<td>&nbsp;</td>
+<td>117g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 400</td>
+<td>667MHz</td>
+<td>512MB</td>
+<td>160MB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>No flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Nexus S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Nexus S.jpg" alt="Nexus S" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Nexus S<br>(i9020/i9023)</td>
+<td>4.2</td>
+<td>None</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>124mm</td>
+<td>11mm</td>
+<td>1500mAh</td>
+<td>Dec 2010</td>
+<td>&nbsp;</td>
+<td>129g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>Super AMOLED/S-LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>16GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>720 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Milestone 2.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Milestone 2.jpg" alt="Milestone 2" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Milestone 2</td>
+<td>2.2</td>
+<td>Motoblur</td>
+<td>Touch Slider</td>
+<td>61mm</td>
+<td>116mm</td>
+<td>14mm</td>
+<td>1400mAh</td>
+<td>Nov 2010</td>
+<td>&nbsp;</td>
+<td>169g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>8GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>Dual LED flash</td>
+<td>1080 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Ideos.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Ideos.jpg" alt="Ideos" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Ideos<br>(U8150)</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>56mm</td>
+<td>104mm</td>
+<td>13mm</td>
+<td>1200mAh</td>
+<td>Nov 2010</td>
+<td>&nbsp;</td>
+<td>102g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>LED flash</td>
+<td>352 x 288<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Gratia.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Gratia.jpg" alt="Gratia" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Gratia</td>
+<td>2.1</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>58mm</td>
+<td>104mm</td>
+<td>12mm</td>
+<td>1200mAh</td>
+<td>Nov 2010</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>384MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>No flash</td>
+<td>640 x 480<br>20fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Defy.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Defy.jpg" alt="Defy" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Defy<br>(MB525)</td>
+<td>2.2</td>
+<td>Motoblur</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>107mm</td>
+<td>13mm</td>
+<td>1540mAh</td>
+<td>Nov 2010</td>
+<td>&nbsp;</td>
+<td>118g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Desire Z.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire Z.jpg" alt="Desire Z" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire Z</td>
+<td>2.2</td>
+<td>Sense</td>
+<td>Touch Slider</td>
+<td>60mm</td>
+<td>119mm</td>
+<td>14mm</td>
+<td>1300mAh</td>
+<td>Nov 2010</td>
+<td>&nbsp;</td>
+<td>180g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>480 x 800</td>
+<td>800MHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>LED flash</td>
+<td>1080 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus One.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus One.jpg" alt="Optimus One" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus One<br>(P500)</td>
+<td>2.3</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>59mm</td>
+<td>114mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Nov 2010</td>
+<td>&nbsp;</td>
+<td>129g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>170MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>640 x 480<br>18fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/OT-980.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_OT-980.jpg" alt="OT-980" height="75" border="0"></a></td>
+<td>Alcatel</td>
+<td>OT-980</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch Slider</td>
+<td>60mm</td>
+<td>113mm</td>
+<td>16mm</td>
+<td>1150mAh</td>
+<td>Oct 2010</td>
+<td>&nbsp;</td>
+<td>125g</td>
+<td>2.8&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>192MB</td>
+<td>70MB</td>
+<td>b/g</td>
+<td>2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Desire HD.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire HD.jpg" alt="Desire HD" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire HD</td>
+<td>2.3</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>68mm</td>
+<td>123mm</td>
+<td>12mm</td>
+<td>1230mAh</td>
+<td>Oct 2010</td>
+<td>&nbsp;</td>
+<td>164g</td>
+<td>4.3&#34;</td>
+<td>Capacitive,<br>S-LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>768MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>8 MP<br>Dual LED flash</td>
+<td>1080 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/ESP.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_ESP.jpg" alt="ESP" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>ESP<br>(U8500)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>58mm</td>
+<td>112mm</td>
+<td>13mm</td>
+<td>1150mAh</td>
+<td>Oct 2010</td>
+<td>&nbsp;</td>
+<td>115g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>Transflective TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/San Francisco.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_San Francisco.jpg" alt="San Francisco" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>San Francisco<br>(Blade)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>116mm</td>
+<td>12mm</td>
+<td>1250mAh</td>
+<td>Sep 2010</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>OLED/TFT</td>
+<td>480 x 800</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>150MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>352 x 288<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia X8.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia X8.jpg" alt="Xperia X8" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia X8</td>
+<td>2.1</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>54mm</td>
+<td>99mm</td>
+<td>15mm</td>
+<td>1200mAh</td>
+<td>Sep 2010</td>
+<td>&nbsp;</td>
+<td>104g</td>
+<td>3&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>128MB</td>
+<td>128MB</td>
+<td>b/g</td>
+<td>3 MP<br>No flash</td>
+<td>640 x 480<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Europa.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Europa.jpg" alt="Galaxy Europa" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Europa<br>(i5500)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>56mm</td>
+<td>108mm</td>
+<td>12mm</td>
+<td>1200mAh</td>
+<td>Aug 2010</td>
+<td>&nbsp;</td>
+<td>102g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>140MB</td>
+<td>b/g</td>
+<td>2 MP<br>No flash</td>
+<td>320 x 240<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Stream.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Stream.jpg" alt="Stream" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Stream</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>120mm</td>
+<td>11mm</td>
+<td>1400mAh</td>
+<td>Aug 2010</td>
+<td>&nbsp;</td>
+<td>140g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>AMOLED</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>1080 x 720<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Milestone XT720.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Milestone XT720.jpg" alt="Milestone XT720" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Milestone XT720</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>61mm</td>
+<td>116mm</td>
+<td>11mm</td>
+<td>1390mAh</td>
+<td>Jul 2010</td>
+<td>&nbsp;</td>
+<td>160g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>Transflective TFT</td>
+<td>480 x 854</td>
+<td>550MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>8 MP<br>Xenon flash</td>
+<td>1080 x 720<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Racer.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Racer.jpg" alt="Racer" height="75" border="0"></a></td>
+<td>ZTE</td>
+<td>Racer<br>(X850)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>55mm</td>
+<td>102mm</td>
+<td>15mm</td>
+<td>1100mAh</td>
+<td>Jul 2010</td>
+<td>&nbsp;</td>
+<td>100g</td>
+<td>2.8&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>256MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>352 x 288<br>20fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Flipout.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Flipout.jpg" alt="Flipout" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Flipout</td>
+<td>2.1</td>
+<td>Motoblur</td>
+<td>Touch Slider</td>
+<td>67mm</td>
+<td>67mm</td>
+<td>17mm</td>
+<td>1170mAh</td>
+<td>Jul 2010</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>Transflective TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g/n</td>
+<td>3.2 MP<br>No flash</td>
+<td>352 x 288<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Apollo.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Apollo.jpg" alt="Galaxy Apollo" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Apollo<br>(i5801)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>55mm</td>
+<td>114mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Jul 2010</td>
+<td>&nbsp;</td>
+<td>109g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 400</td>
+<td>667MHz</td>
+<td>256MB</td>
+<td>170MB</td>
+<td>b/g/n</td>
+<td>3 MP<br>No flash</td>
+<td>480 x 320<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/beTouch E120.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_beTouch E120.jpg" alt="beTouch E120" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>beTouch E120</td>
+<td>1.6</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>54mm</td>
+<td>105mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Jun 2010</td>
+<td>&nbsp;</td>
+<td>105g</td>
+<td>2.8&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>416MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>3 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Optimus.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Optimus.jpg" alt="Optimus" height="75" border="0"></a></td>
+<td>LG</td>
+<td>Optimus<br>(GT540)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>55mm</td>
+<td>109mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Jun 2010</td>
+<td>&nbsp;</td>
+<td>116g</td>
+<td>3&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>156MB</td>
+<td>130MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>480 x 320<br>17fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy S.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy S.jpg" alt="Galaxy S" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy S<br>(GT-I9000)</td>
+<td>2.3</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>64mm</td>
+<td>122mm</td>
+<td>10mm</td>
+<td>1500mAh</td>
+<td>Jun 2010</td>
+<td>&nbsp;</td>
+<td>118g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>Super AMOLED</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>2GB</td>
+<td>b/g/n</td>
+<td>5 MP<br>No flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Streak.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Streak.jpg" alt="Streak" height="75" border="0"></a></td>
+<td>Dell</td>
+<td>Streak</td>
+<td>2.2</td>
+<td>Stage</td>
+<td>Touch</td>
+<td>79mm</td>
+<td>153mm</td>
+<td>10mm</td>
+<td>1530mAh</td>
+<td>Jun 2010</td>
+<td>&nbsp;</td>
+<td>220g</td>
+<td>5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>Dual LED flash</td>
+<td>1080 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia X10 Mini Pro.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia X10 Mini Pro.jpg" alt="Xperia X10 Mini Pro" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia X10 Mini Pro<br>(U20i)</td>
+<td>2.1</td>
+<td>UXP</td>
+<td>Touch Slider</td>
+<td>52mm</td>
+<td>90mm</td>
+<td>17mm</td>
+<td>970mAh</td>
+<td>May 2010</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>2.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>256MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/845.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_845.jpg" alt="845" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>845<br>(U8120)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>55mm</td>
+<td>99mm</td>
+<td>14mm</td>
+<td>1200mAh</td>
+<td>May 2010</td>
+<td>&nbsp;</td>
+<td>109g</td>
+<td>2.8&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>240 x 320</td>
+<td>525MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>320 x 240<br>20fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Wildfire.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Wildfire.jpg" alt="Wildfire" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Wildfire</td>
+<td>2.2</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>107mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>May 2010</td>
+<td>&nbsp;</td>
+<td>118g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>384MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>352 x 288<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Pulse Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Pulse Mini.jpg" alt="Pulse Mini" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Pulse Mini<br>(U8110)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>106mm</td>
+<td>14mm</td>
+<td>1150mAh</td>
+<td>May 2010</td>
+<td>&nbsp;</td>
+<td>110g</td>
+<td>2.8&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>LED flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia X10 Mini.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia X10 Mini.jpg" alt="Xperia X10 Mini" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia X10 Mini<br>(E10i)</td>
+<td>2.1</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>50mm</td>
+<td>83mm</td>
+<td>16mm</td>
+<td>950mAh</td>
+<td>May 2010</td>
+<td>&nbsp;</td>
+<td>88g</td>
+<td>2.6&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>240 x 320</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>256MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Quench.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Quench.jpg" alt="Quench" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Quench</td>
+<td>1.5</td>
+<td>Motoblur</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>117mm</td>
+<td>12mm</td>
+<td>1420mAh</td>
+<td>Apr 2010</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>3.1&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>352 x 288<br>25fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Backflip.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Backflip.jpg" alt="Backflip" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Backflip</td>
+<td>2.1</td>
+<td>Motoblur</td>
+<td>Touch Slider</td>
+<td>53mm</td>
+<td>108mm</td>
+<td>15mm</td>
+<td>1400mAh</td>
+<td>Apr 2010</td>
+<td>&nbsp;</td>
+<td>133g</td>
+<td>3.1&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>352 x 288<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/beTouch E400.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_beTouch E400.jpg" alt="beTouch E400" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>beTouch E400</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>115mm</td>
+<td>12mm</td>
+<td>1090mAh</td>
+<td>Apr 2010</td>
+<td>&nbsp;</td>
+<td>125g</td>
+<td>3.2&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>720 x 480<br>26fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Legend.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Legend.jpg" alt="Legend" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Legend</td>
+<td>2.2</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>56mm</td>
+<td>112mm</td>
+<td>12mm</td>
+<td>1300mAh</td>
+<td>Mar 2010</td>
+<td>&nbsp;</td>
+<td>126g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>AMOLED/S-LCD</td>
+<td>320 x 480</td>
+<td>600MHz</td>
+<td>384MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>640 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Desire.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Desire.jpg" alt="Desire" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Desire</td>
+<td>2.2</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>119mm</td>
+<td>12mm</td>
+<td>1400mAh</td>
+<td>Mar 2010</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>AMOLED/S-LCD</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>576MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>1280 x 720<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Xperia X10.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Xperia X10.jpg" alt="Xperia X10" height="75" border="0"></a></td>
+<td>Sony Ericsson</td>
+<td>Xperia X10</td>
+<td>2.3</td>
+<td>UXP</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>119mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Mar 2010</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>4&#34;</td>
+<td>Capacitive,<br>Transflective TFT</td>
+<td>480 x 854</td>
+<td>1GHz</td>
+<td>384MB</td>
+<td>1024MB</td>
+<td>b/g</td>
+<td>8.1 MP<br>LED flash</td>
+<td>854 x 480<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/beTouch E110.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_beTouch E110.jpg" alt="beTouch E110" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>beTouch E110</td>
+<td>1.5</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>54mm</td>
+<td>104mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Mar 2010</td>
+<td>&nbsp;</td>
+<td>105g</td>
+<td>2.8&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>240 x 320</td>
+<td>416MHz</td>
+<td>256MB</td>
+<td>256MB</td>
+<td>-</td>
+<td>3.2 MP<br>No flash</td>
+<td>? x ?<br>? fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/InTouch Max.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_InTouch Max.jpg" alt="InTouch Max" height="75" border="0"></a></td>
+<td>LG</td>
+<td>InTouch Max<br>(GW620)</td>
+<td>1.5</td>
+<td>&nbsp;</td>
+<td>Touch Slider</td>
+<td>55mm</td>
+<td>109mm</td>
+<td>16mm</td>
+<td>1500mAh</td>
+<td>Feb 2010</td>
+<td>&nbsp;</td>
+<td>139g</td>
+<td>3&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>170MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>320 x 240<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Nexus One.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Nexus One.jpg" alt="Nexus One" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Nexus One</td>
+<td>2.3</td>
+<td>None</td>
+<td>Touch</td>
+<td>60mm</td>
+<td>119mm</td>
+<td>12mm</td>
+<td>1400mAh</td>
+<td>Jan 2010</td>
+<td>&nbsp;</td>
+<td>130g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>AMOLED</td>
+<td>480 x 800</td>
+<td>1GHz</td>
+<td>512MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>720 x 480<br>20fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Liquid.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Liquid.jpg" alt="Liquid" height="75" border="0"></a></td>
+<td>Acer</td>
+<td>Liquid<br>(A1)</td>
+<td>1.6</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>115mm</td>
+<td>13mm</td>
+<td>1350mAh</td>
+<td>Dec 2009</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 800</td>
+<td>768MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>No flash</td>
+<td>640 x 480<br>20fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy Portal.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy Portal.jpg" alt="Galaxy Portal" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy Portal<br>(GT-i5700)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>57mm</td>
+<td>115mm</td>
+<td>13mm</td>
+<td>1500mAh</td>
+<td>Nov 2009</td>
+<td>&nbsp;</td>
+<td>120g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>800MHz</td>
+<td>256MB</td>
+<td>180MB</td>
+<td>b/g</td>
+<td>3 MP<br>No flash</td>
+<td>352 x 288<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Milestone.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Milestone.jpg" alt="Milestone" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Milestone</td>
+<td>2.2</td>
+<td>&nbsp;</td>
+<td>Touch Slider</td>
+<td>60mm</td>
+<td>116mm</td>
+<td>14mm</td>
+<td>1400mAh</td>
+<td>Nov 2009</td>
+<td>&nbsp;</td>
+<td>165g</td>
+<td>3.7&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>480 x 854</td>
+<td>550MHz</td>
+<td>256MB</td>
+<td>133MB</td>
+<td>b/g</td>
+<td>5 MP<br>Dual LED flash</td>
+<td>720 x 480<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Dext.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Dext.jpg" alt="Dext" height="75" border="0"></a></td>
+<td>Motorola</td>
+<td>Dext</td>
+<td>1.5</td>
+<td>Motoblur</td>
+<td>Touch Slider</td>
+<td>58mm</td>
+<td>114mm</td>
+<td>16mm</td>
+<td>1420mAh</td>
+<td>Oct 2009</td>
+<td>&nbsp;</td>
+<td>163g</td>
+<td>3.1&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>No flash</td>
+<td>480 x 320<br>24fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Pulse.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Pulse.jpg" alt="Pulse" height="75" border="0"></a></td>
+<td>Huawei</td>
+<td>Pulse<br>(U8220)</td>
+<td>2.1</td>
+<td>&nbsp;</td>
+<td>Touch</td>
+<td>63mm</td>
+<td>116mm</td>
+<td>14mm</td>
+<td>1500mAh</td>
+<td>Oct 2009</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>3.5&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>192MB</td>
+<td>256MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>320 x 240<br>30fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Tattoo.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Tattoo.jpg" alt="Tattoo" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Tattoo</td>
+<td>1.6</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>55mm</td>
+<td>106mm</td>
+<td>14mm</td>
+<td>1100mAh</td>
+<td>Sep 2009</td>
+<td>&nbsp;</td>
+<td>113g</td>
+<td>2.8&#34;</td>
+<td>Resistive,<br>TFT</td>
+<td>240 x 320</td>
+<td>528MHz</td>
+<td>256MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>352 x 288<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Hero.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Hero.jpg" alt="Hero" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>Hero</td>
+<td>2.1</td>
+<td>Sense</td>
+<td>Touch</td>
+<td>56mm</td>
+<td>112mm</td>
+<td>14mm</td>
+<td>1350mAh</td>
+<td>Jul 2009</td>
+<td>&nbsp;</td>
+<td>135g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>288MB</td>
+<td>512MB</td>
+<td>b/g</td>
+<td>5 MP<br>No flash</td>
+<td>352 x 288<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/Galaxy.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_Galaxy.jpg" alt="Galaxy" height="75" border="0"></a></td>
+<td>Samsung</td>
+<td>Galaxy<br>(i7500)</td>
+<td>1.5</td>
+<td>Touchwiz</td>
+<td>Touch</td>
+<td>56mm</td>
+<td>116mm</td>
+<td>12mm</td>
+<td>1500mAh</td>
+<td>Jun 2009</td>
+<td>&nbsp;</td>
+<td>114g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>AMOLED</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>192MB</td>
+<td>8GB</td>
+<td>b/g</td>
+<td>5 MP<br>LED flash</td>
+<td>352 x 288<br>15fps</td>
+</tr>
+<tr>
+<td bgcolor="white" align="center"><a href="phones/G1.jpg"><img src="/web/20160322070125im_/http://www.jamoi.co.uk/phones/_G1.jpg" alt="G1" height="75" border="0"></a></td>
+<td>HTC</td>
+<td>G1</td>
+<td>1.6</td>
+<td>&nbsp;</td>
+<td>Touch Slider</td>
+<td>56mm</td>
+<td>118mm</td>
+<td>17mm</td>
+<td>1150mAh</td>
+<td>Oct 2008</td>
+<td>&nbsp;</td>
+<td>158g</td>
+<td>3.2&#34;</td>
+<td>Capacitive,<br>TFT</td>
+<td>320 x 480</td>
+<td>528MHz</td>
+<td>192MB</td>
+<td>256MB</td>
+<td>b/g</td>
+<td>3.2 MP<br>No flash</td>
+<td>352 x 288<br>15fps</td>
+</tr>
 </tbody>
 </table>
 <script type="text/javascript">
