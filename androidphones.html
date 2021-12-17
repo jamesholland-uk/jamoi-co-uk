@@ -12,22 +12,8 @@
 </head>
 
 <body>
-    <!-- https://github.com/chris-l/html-include -->
-    <script>
-        if ('registerElement' in document
-          && 'createShadowRoot' in HTMLElement.prototype
-          && 'import' in document.createElement('link')
-          && 'content' in document.createElement('template')) {
-          // We're using a browser with native WC support!
-        } else {
-          document.write('<script src="https:\/\/cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.5/webcomponents.min.js"><\/script>')
-        }
-    </script>
-    <script src="html-include.min.js"></script>
-    <!-- https://github.com/chris-l/html-include -->
 
-<html-include src="tophalf.txt"></html-include>
- 
+<iframe src="tophalf.html" onload="this.insertAdjacentHTML('afterend', (this.contentDocument.body||this.contentDocument).innerHTML);this.remove()"></iframe> 
 
 <br>
 <b>Please note that as of 31 Dec 2013, this project/list is now mothballed as I no longer have the time to keep it up to date, apologies!</b><br>
@@ -3547,16 +3533,7 @@ Click <a href="feedback.php">here</a> to report incorrect data, provide feedback
 <br>
 Inspired by a <a href="http://www.stevelitchfield.com/s60history.htm">similar table</a> by <a href="http://twitter.com/stevelitchfield">Steve Litchfield</a>.
 
-<br>
-<br>
-<hr noshade="noshade">
-<br>
-<br>
-<div align="center">
-<br>
-<br>
-<br>
-</div> 
+<iframe src="bottomhalf.html" onload="this.insertAdjacentHTML('afterend', (this.contentDocument.body||this.contentDocument).innerHTML);this.remove()"></iframe>
 
 </body>
 
