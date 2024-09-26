@@ -5,7 +5,6 @@ const playerCountSlider = document.getElementById('player-count');
 const createTeamButton = document.getElementById('create-team-button');
 const falconsButton = document.getElementById('falcons-button');
 let players = [];
-const snapMargin = 10; // Margin between snapped circles
 
 // Initial Setup
 function setup() {
@@ -123,46 +122,12 @@ function makePlayersDraggable() {
         function onMouseUp() {
             document.removeEventListener('mousemove', onMouseMove);
             document.removeEventListener('mouseup', onMouseUp);
-            snapPlayer(player);
         }
 
         // Handle when the touch is released
         function onTouchEnd() {
             document.removeEventListener('touchmove', onTouchMove);
             document.removeEventListener('touchend', onTouchEnd);
-            snapPlayer(player);
-        }
-
-        // Snap player back to the container row in a neat order when off the pitch
-        function snapPlayer(player) {
-            const pitchRect = pitch.getBoundingClientRect();
-            const playerRect = player.getBoundingClientRect();
-            const playerContainerRect = playerContainer.getBoundingClientRect();
-
-            // Check if player is inside the pitch, if yes, leave it where it is
-            if (
-                playerRect.left > pitchRect.left &&
-                playerRect.right < pitchRect.right &&
-                playerRect.top > pitchRect.top &&
-                playerRect.bottom < pitchRect.bottom
-            ) {
-                return;
-            }
-
-            // If player is dragged off the pitch and within player container area, snap it to the row
-            if (playerRect.top > pitchRect.bottom) {
-                const numPlayersInRow = Math.floor(playerContainerRect.width / (player.offsetWidth + snapMargin));
-                const index = Array.from(playerContainer.children).indexOf(player);
-
-                const rowPositionX = (index % numPlayersInRow) * (player.offsetWidth + snapMargin);
-                const rowPositionY = Math.floor(index / numPlayersInRow) * (player.offsetHeight + snapMargin);
-
-                player.style.left = `${rowPositionX}px`;
-                player.style.top = `${rowPositionY}px`;
-
-                // Make sure the player stays in the container
-                playerContainer.appendChild(player);
-            }
         }
     });
 }
