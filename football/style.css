@@ -21,7 +21,7 @@ h1 {
 #pitch-container {
     position: relative;
     width: 100%;
-    padding-top: 150%; /* Aspect ratio for soccer pitch */
+    padding-top: 150%;
 }
 
 #pitch {
@@ -32,9 +32,72 @@ h1 {
     bottom: 0;
     background-color: green;
     border: 1px solid white;
-    background-image: url('pitch-markings.svg'); /* SVG for pitch lines */
-    background-size: cover;
-    background-position: center;
+}
+
+/* Center Circle */
+.center-circle {
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 10%; /* Adjust size as needed */
+    height: 10%; /* Adjust size as needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Halfway Line */
+.halfway-line {
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Line width */
+    background-color: white;
+    top: 50%;
+    left: 0;
+}
+
+/* Penalty Area (Top) */
+.penalty-area-top {
+    position: absolute;
+    width: 16.5%; /* Adjust according to your requirement */
+    height: 40%; /* Adjust according to your requirement */
+    border: 2px solid white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Penalty Area (Bottom) */
+.penalty-area-bottom {
+    position: absolute;
+    width: 16.5%; /* Adjust according to your requirement */
+    height: 40%; /* Adjust according to your requirement */
+    border: 2px solid white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Goal Area (Top) */
+.goal-area-top {
+    position: absolute;
+    width: 5.5%; /* Adjust according to your requirement */
+    height: 18.32%; /* Adjust according to your requirement */
+    border: 2px solid white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Goal Area (Bottom) */
+.goal-area-bottom {
+    position: absolute;
+    width: 5.5%; /* Adjust according to your requirement */
+    height: 18.32%; /* Adjust according to your requirement */
+    border: 2px solid white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #controls {
