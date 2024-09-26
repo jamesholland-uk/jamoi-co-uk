@@ -159,10 +159,9 @@ function makePlayersDraggable() {
 
                 player.style.left = `${rowPositionX}px`;
                 player.style.top = `${rowPositionY}px`;
-            } else {
-                // Prevent circles from moving to the top-left of the screen
-                player.style.left = `${startX}px`;
-                player.style.top = `${startY}px`;
+
+                // Make sure the player stays in the container
+                playerContainer.appendChild(player);
             }
         }
     });
