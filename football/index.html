@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Formation Tool</title>
+    <title>Soccer Formation Planner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="controls">
-        <label for="playerCount" id="playerCountLabel">Number of Players: 13</label>
-        <input type="range" id="playerCount" min="6" max="18" value="13">
-        <button id="generatePlayers">Generate Players</button>
-        <button id="falconsButton">Falcons U11s</button> <!-- New Button -->
-    </div>
-    <div id="pitch-container">
-        <div id="pitch"></div>
-    </div>
-    <div id="players-container"></div>
+    <div id="app">
+        <h1>Soccer Formation Planner</h1>
 
-    <script src="script.js"></script>
+        <!-- Soccer Pitch -->
+        <div id="pitch-container">
+            <div id="pitch">
+                <!-- Players will be dragged and dropped here -->
+            </div>
+        </div>
+
+        <!-- Player Controls -->
+        <div id="controls">
+            <label for="player-count">Player Count: </label>
+            <input type="range" id="player-count" min="6" max="18" value="13">
+            <button id="create-team-button">Create Team</button>
+            <button id="falcons-button">Falcons U11s</button>
+        </div>
+
+        <!-- Player Circles -->
+        <div id="players-container">
+            <!-- Circles will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

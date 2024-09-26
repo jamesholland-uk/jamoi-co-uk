@@ -1,144 +1,83 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  font-family: Arial, sans-serif;
-  height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#controls {
-  margin-bottom: 10px;
-  text-align: center;
+#app {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
 }
 
-#playerCount {
-  width: 80%;
-  margin: 10px 0;
+h1 {
+    text-align: center;
 }
 
 #pitch-container {
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  max-width: 600px; /* Limit width to avoid overlap */
-  margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    padding-top: 150%; /* Aspect ratio for soccer pitch */
 }
 
 #pitch {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: green;
+    border: 1px solid white;
+    background-image: url('pitch-markings.svg'); /* SVG for pitch lines */
+    background-size: cover;
+    background-position: center;
 }
 
-/* Football pitch elements */
-.halfway-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  transform: translateY(-50%);
+#controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
 }
 
-.center-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 15%;
-  height: 15%;
-  border: 2px solid white;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Penalty Areas */
-.penalty-area {
-  position: absolute;
-  width: 44%; /* Width corresponding to 44 yards */
-  height: 18%; /* Height is approximately 18 yards */
-}
-
-.penalty-area.top {
-  top: 0; /* Positioned at the top */
-  left: 50%;
-  transform: translateX(-50%); /* Centered horizontally */
-}
-
-.penalty-area.bottom {
-  bottom: 0; /* Positioned at the bottom */
-  left: 50%;
-  transform: translateX(-50%); /* Centered horizontally */
-}
-
-/* Goal Areas (6 Yard Boxes) */
-.goal-area {
-  position: absolute;
-  width: 15%; /* Width corresponding to 12 yards */
-  height: 10%; /* Height is approximately 6 yards */
-}
-
-.goal-area.top {
-  top: 0; /* Positioned at the top */
-  left: 50%; /* Centered within the penalty area */
-  transform: translateX(-50%);
-}
-
-.goal-area.bottom {
-  bottom: 0; /* Positioned at the bottom */
-  left: 50%; /* Centered within the penalty area */
-  transform: translateX(-50%);
-}
-
-/* Player container and layout */
 #players-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 600px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.player {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(255, 99, 99, 0.8);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: grab;
-  margin: 5px;
-  position: relative;  /* Ensure it stays in position */
-  user-select: none;   /* Prevent text selection */
+.player-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: grab;
+    user-select: none;
+    position: relative;
 }
 
-.goalkeeper {
-  background-color: rgba(99, 255, 99, 0.8);
+.player-circle.goalkeeper {
+    background-color: lightgreen;
 }
 
-.player input {
-  width: 40px;
-  text-align: center;
-  border: none;
-  background-color: transparent;
+input[type="text"] {
+    width: 80%;
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 12px;
 }
 
-.player.hide {
-  display: none;
-}
-
-/* Responsive adjustments */
 @media (max-width: 600px) {
-  #pitch-container {
-    height: 60vh; /* Responsive height adjustment */
-  }
+    .player-circle {
+        width: 40px;
+        height: 40px;
+    }
 }

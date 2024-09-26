@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Pitch App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pitch-container">
+        <div id="pitch"></div>
+        <div id="controls">
+            <label for="playerCount">Total Players: <span id="playerCountLabel">13</span></label>
+            <input type="range" id="playerCount" min="6" max="18" value="13">
+            <button id="generatePlayers">Generate Players</button>
+            <button id="falconsButton">Falcons U11s</button>
+        </div>
+        <div id="players-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

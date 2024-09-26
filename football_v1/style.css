@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#pitch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pitch {
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    position: relative;
+    border: 2px solid black;
+    background-color: green; /* Soccer pitch background */
+}
+
+.player {
+    width: 40px;
+    height: 40px;
+    background-color: lightcoral; /* Player color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* For draggable positioning */
+}
+
+.goalkeeper {
+    background-color: lightgreen; /* Goalkeeper color */
+}
+
+.halfway-line {
+    width: 2px;
+    height: 100%;
+    background-color: white; /* Line color */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-circle {
+    width: 50px; /* Circle size */
+    height: 50px;
+    border: 2px solid white; /* Circle color */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.penalty-area {
+    position: absolute;
+    border: 2px solid white; /* Area color */
+}
+
+.penalty-area.top {
+    width: 44px; /* Adjusted width based on scale */
+    height: 18px; /* Adjusted height */
+    top: 0;
+    left: calc(50% - 22px); /* Centered */
+}
+
+.penalty-area.bottom {
+    width: 44px; /* Adjusted width based on scale */
+    height: 18px; /* Adjusted height */
+    bottom: 0;
+    left: calc(50% - 22px); /* Centered */
+}
+
+.goal-area {
+    position: absolute;
+    border: 2px solid white; /* Area color */
+}
+
+.goal-area.top {
+    width: 12px; /* Adjusted width */
+    height: 6px; /* Adjusted height */
+    top: 0;
+    left: calc(50% - 6px); /* Centered */
+}
+
+.goal-area.bottom {
+    width: 12px; /* Adjusted width */
+    height: 6px; /* Adjusted height */
+    bottom: 0;
+    left: calc(50% - 6px); /* Centered */
+}
+
+#controls {
+    margin: 10px 0;
+}
+
+#players-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
