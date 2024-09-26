@@ -17,7 +17,7 @@ body {
 #pitch-container {
     position: relative;
     width: 90%; /* Set pitch container width to 90% of the screen */
-    padding-top: 150%;
+    padding-top: 130%;
     margin: auto;
 }
 
