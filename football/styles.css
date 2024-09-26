@@ -140,7 +140,7 @@ input[type="text"] {
 
 @media (max-width: 600px) {
     .player-circle {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 }
