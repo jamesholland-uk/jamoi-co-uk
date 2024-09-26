@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Football Formation App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Formation Tool</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="controls">
-    <label for="playerCount">Number of players (including goalkeeper):</label>
-    <input type="number" id="playerCount" min="1" max="11" value="11">
-    <button id="generatePlayers">Generate Players</button>
-  </div>
-  
-  <div id="pitch-container">
-    <div id="pitch">
-      <div class="halfway-line"></div>
-      <div class="center-circle"></div>
-      <div class="penalty-area left"></div>
-      <div class="penalty-area right"></div>
-      <div class="goal-area left"></div>
-      <div class="goal-area right"></div>
+    <div id="controls">
+        <label for="playerCount" id="playerCountLabel">Number of Players: 13</label>
+        <input type="range" id="playerCount" min="6" max="18" value="13">
+        <button id="generatePlayers">Generate Players</button>
+        <button id="falconsButton">Falcons U11s</button> <!-- New Button -->
     </div>
-  </div>
-  
-  <div id="players-container"></div>
+    <div id="pitch-container">
+        <div id="pitch"></div>
+    </div>
+    <div id="players-container"></div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

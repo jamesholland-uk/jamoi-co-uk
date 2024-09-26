@@ -8,93 +8,103 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
   background-color: white;
   font-family: Arial, sans-serif;
+  height: 100vh;
 }
 
 #controls {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#playerCount {
+  width: 80%;
+  margin: 10px 0;
 }
 
 #pitch-container {
-  width: 90vw;
-  height: 50vh;
   position: relative;
-  background-color: #fff;
-  border: 2px solid black;
+  width: 100%;
+  height: 70vh;
+  max-width: 600px; /* Limit width to avoid overlap */
+  margin-bottom: 10px;
 }
 
 #pitch {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   background-color: green;
 }
 
 /* Football pitch elements */
 .halfway-line {
   position: absolute;
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
   background-color: white;
-  transform: translateX(-50%);
+  transform: translateY(-50%);
 }
 
 .center-circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10%;
-  height: 10%;
+  width: 15%;
+  height: 15%;
   border: 2px solid white;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
+/* Penalty Areas */
 .penalty-area {
   position: absolute;
-  width: 10%;
-  height: 40%;
-  border: 2px solid white;
+  width: 44%; /* Width corresponding to 44 yards */
+  height: 18%; /* Height is approximately 18 yards */
 }
 
-.penalty-area.left {
-  left: 0;
-  top: 30%;
+.penalty-area.top {
+  top: 0; /* Positioned at the top */
+  left: 50%;
+  transform: translateX(-50%); /* Centered horizontally */
 }
 
-.penalty-area.right {
-  right: 0;
-  top: 30%;
+.penalty-area.bottom {
+  bottom: 0; /* Positioned at the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Centered horizontally */
 }
 
+/* Goal Areas (6 Yard Boxes) */
 .goal-area {
   position: absolute;
-  width: 5%;
-  height: 20%;
-  border: 2px solid white;
+  width: 15%; /* Width corresponding to 12 yards */
+  height: 10%; /* Height is approximately 6 yards */
 }
 
-.goal-area.left {
-  left: 0;
-  top: 40%;
+.goal-area.top {
+  top: 0; /* Positioned at the top */
+  left: 50%; /* Centered within the penalty area */
+  transform: translateX(-50%);
 }
 
-.goal-area.right {
-  right: 0;
-  top: 40%;
+.goal-area.bottom {
+  bottom: 0; /* Positioned at the bottom */
+  left: 50%; /* Centered within the penalty area */
+  transform: translateX(-50%);
 }
 
+/* Player container and layout */
 #players-container {
   display: flex;
-  justify-content: space-around;
-  width: 90vw;
-  padding: 20px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .player {
@@ -106,7 +116,9 @@ body {
   align-items: center;
   justify-content: center;
   cursor: grab;
-  position: relative;
+  margin: 5px;
+  position: relative;  /* Ensure it stays in position */
+  user-select: none;   /* Prevent text selection */
 }
 
 .goalkeeper {
@@ -120,17 +132,13 @@ body {
   background-color: transparent;
 }
 
-.player:active {
-  cursor: grabbing;
+.player.hide {
+  display: none;
 }
 
-/* Make the layout responsive for smartphones */
-@media (max-width: 768px) {
+/* Responsive adjustments */
+@media (max-width: 600px) {
   #pitch-container {
-    width: 95vw;
-    height: 45vh;
-  }
-  #players-container {
-    width: 95vw;
+    height: 60vh; /* Responsive height adjustment */
   }
 }
