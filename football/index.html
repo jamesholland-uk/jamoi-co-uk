@@ -8,6 +8,11 @@
 </head>
 <body>
     <div id="app">
+        <div id="controls">
+            <input type="range" id="player-count" min="6" max="18" value="13">
+            <button id="create-team-button">Create Team</button>
+            <button id="falcons-button">Falcons U11s</button>
+        </div>
         <div id="pitch-container">
             <div id="pitch">
                 <div class="center-circle"></div>
@@ -19,11 +24,6 @@
             </div>
         </div>
         <div id="players-container"></div>
-        <div id="controls">
-            <input type="range" id="player-count" min="6" max="18" value="13">
-            <button id="create-team-button">Create Team</button>
-            <button id="falcons-button">Falcons U11s</button>
-        </div>
     </div>
     <script src="app.js"></script>
 </body>
