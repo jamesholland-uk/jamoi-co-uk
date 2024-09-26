@@ -14,13 +14,9 @@ body {
     padding: 10px;
 }
 
-h1 {
-    text-align: center;
-}
-
 #pitch-container {
     position: relative;
-    width: 100%;
+    width: 90%; /* Set pitch container width to 90% of the screen */
     padding-top: 150%;
 }
 
@@ -59,8 +55,8 @@ h1 {
 /* Penalty Area (Top) */
 .penalty-area-top {
     position: absolute;
-    width: 16.5%; /* Adjust according to your requirement */
-    height: 40%; /* Adjust according to your requirement */
+    width: 50%; /* Adjust according to your requirement */
+    height: 15%; /* Adjust according to your requirement */
     border: 2px solid white;
     top: 0;
     left: 50%;
@@ -70,8 +66,8 @@ h1 {
 /* Penalty Area (Bottom) */
 .penalty-area-bottom {
     position: absolute;
-    width: 16.5%; /* Adjust according to your requirement */
-    height: 40%; /* Adjust according to your requirement */
+    width: 50%; /* Adjust according to your requirement */
+    height: 15%; /* Adjust according to your requirement */
     border: 2px solid white;
     bottom: 0;
     left: 50%;
@@ -81,8 +77,8 @@ h1 {
 /* Goal Area (Top) */
 .goal-area-top {
     position: absolute;
-    width: 5.5%; /* Adjust according to your requirement */
-    height: 18.32%; /* Adjust according to your requirement */
+    width: 35%; /* Adjust according to your requirement */
+    height: 5%; /* Adjust according to your requirement */
     border: 2px solid white;
     top: 0;
     left: 50%;
@@ -92,8 +88,8 @@ h1 {
 /* Goal Area (Bottom) */
 .goal-area-bottom {
     position: absolute;
-    width: 5.5%; /* Adjust according to your requirement */
-    height: 18.32%; /* Adjust according to your requirement */
+    width: 35%; /* Adjust according to your requirement */
+    height: 5%; /* Adjust according to your requirement */
     border: 2px solid white;
     bottom: 0;
     left: 50%;
