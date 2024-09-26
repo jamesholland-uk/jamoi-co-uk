@@ -6,18 +6,21 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Hide scrollbars */
+    height: 100vh; /* Set body height to 100% of the viewport height */
 }
 
 #app {
     width: 100%;
     max-width: 600px;
     padding: 10px;
+    height: 100%; /* Make app take full height */
 }
 
 #pitch-container {
     position: relative;
     width: 90%; /* Set pitch container width to 90% of the screen */
-    padding-top: 130%;
+    height: 60%; /* Set a fixed height to reduce whitespace */
     margin: auto;
 }
 
@@ -110,8 +113,8 @@ body {
 }
 
 .player-circle {
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: lightcoral;
     display: flex;
@@ -137,7 +140,7 @@ input[type="text"] {
 
 @media (max-width: 600px) {
     .player-circle {
-        width: 40px;
-        height: 40px;
+        width: 70px;
+        height: 70px;
     }
 }
